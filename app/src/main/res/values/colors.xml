@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#99C8C8C8</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="azul">#1F95DE</color>
+    <color name="verde">#48A04B</color>
+    <color name="rojoreg">#EC1F48</color>
+    <color name="verde_oscuro">#327034</color>
+    <color name="transparent">#CCFAFAFA</color>
+    <color name="trans">#1AFFFFFF</color>
+
+    //--------------------------------------------
+    <color name="principal_color">#F4F4F4</color>
+    <color name="dark_texts_color">#515151</color>
+    //--------------------------------------------
+
+    //COLORES DE TEMAS
+    <color name="bio">#FBA53A</color>
+    <color name="univ">#5F9E98</color>
+    <color name="zoo">#D8AA65</color>
+    <color name="filo">#637785</color>
+    <color name="fis">#F3859B</color>
+    <color name="geo">#69EDA1</color>
+    <color name="comp">#6B837E</color>
+    <color name="quim">#0490D1</color>
+    <color name="mat">#5734A5</color>
+    <color name="his">#DFE651</color>
+    <color name="lit">#89EACE</color>
+    <color name="rel">#454545</color>
+    //99COLORS (TRANS)
+    <color name="bio99">#99FBA53A</color>
+    <color name="univ99">#995F9E98</color>
+    <color name="zoo99">#99D8AA65</color>
+    <color name="filo99">#99637785</color>
+    <color name="fis99">#99F3859B</color>
+    <color name="geo99">#9969EDA1</color>
+    <color name="comp99">#996B837E</color>
+    <color name="quim99">#990490D1</color>
+    <color name="mat99">#995734A5</color>
+    <color name="his99">#99DFE651</color>
+    <color name="lit99">#9989EACE</color>
+    <color name="rel99">#99454545</color>
+    //COLORES CLAROS PA EL PERFIL
+    <color name="bioclaro">#4DFBA53A</color>
+    <color name="univclaro">#4D5F9E98</color>
+    <color name="zooclaro">#4DD8AA65</color>
+    <color name="filoclaro">#4D637785</color>
+    <color name="fisclaro">#4DF3859B</color>
+    <color name="geoclaro">#4D69EDA1</color>
+    <color name="compclaro">#4D6B837E</color>
+    <color name="transparente_puro">#00FFFFFF</color>
+    <color name="quimclaro">#4D0490D1</color>
+    <color name="matclaro">#4D5734A5</color>
+    <color name="hisclaro">#4DDFE651</color>
+    <color name="litclaro">#4D89EACE</color>
+    <color name="relclaro">#4D454545</color>
+
+    <color name="gold">#FFBB5A</color>
+    <color name="silver">#A8B0DE</color>
+    <color name="bronze">#B3907E</color>
+    <color name="gris_tabla">#535353</color>
+
+
+</resources>

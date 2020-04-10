@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "191694456481",
+    "firebase_url": "https://thejopipedia.firebaseio.com",
+    "project_id": "thejopipedia",
+    "storage_bucket": "thejopipedia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191694456481:android:34b006dc0fa6a856d4d2e0",
+        "android_client_info": {
+          "package_name": "com.example.thejopipedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191694456481-23q9jj12hi78jm40f5rqkuuo4317spnb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.thejopipedia",
+            "certificate_hash": "d0d8524890d1c5ea0df73e5d63a7de3c04293cfc"
+          }
+        },
+        {
+          "client_id": "191694456481-9h9h8rvclb9r8un8u64t7nrc6vfo5ur8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZdc4t2A08MgH9WF-EJPTuLxlo2u9z4Og"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191694456481-9h9h8rvclb9r8un8u64t7nrc6vfo5ur8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

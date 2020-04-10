@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">JopiPedia BETA</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="dialog_fire_missiles" />
+
+    //NOMBRES DE LOS TEMAS
+    <string name="bio">Biología</string>
+    <string name="univ">Universo</string>
+    <string name="zoo">Zoología</string>
+    <string name="filo">Filosofía</string>
+    <string name="fis">Física</string>
+    <string name="geo">Geografía</string>
+    <string name="comp">Computación</string>
+    <string name="quim">Química</string>
+    <string name="mat">Matemáticas</string>
+    <string name="his">Historia</string>
+    <string name="lit">Literatura</string>
+    <string name="mit">Mitología</string>
+    //LOGIN Y REGISTRO
+    <string name="serv_en_des">servicio en desarrollo</string>
+    <string name="email">Email</string>
+    <string name="email_hint">nombre@ejemplo.com</string>
+    <string name="contraseña_hint">Escriba su Contraseña…</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="iniciar_sesion">"Iniciar sesión"</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="no_cuenta">¿Aún no tienes una cuenta?</string>
+    <string name="eslogan">Expande tu mente!</string>
+    <string name="agregar_usuario">Agregar usuario</string>
+    <string name="nom_apell">Nombre completo:</string>
+    <string name="re_contraseña">Repetir Contraseña:</string>
+    <string name="nom_apell_hint">Escriba sus datos…</string>
+    <string name="re_contraseña_hint">Repita su Contraseña…</string>
+    <string name="cancelar">Cancelar</string>
+    //PUNTUACIONES
+    <string name="tabla_puntos">Puntuaciones</string>
+    <string name="pos1">Primera posición</string>
+    <string name="pos2">Segunda posición</string>
+    <string name="pos3">Tercera posición</string>
+    <string name="pos4">Cuarta posición</string>
+    <string name="pos5">Quinta posición</string>
+    <string name="pos6">Sexta posición</string>
+    <string name="pos7">Septima posición</string>
+    <string name="pos8">Octava posición</string>
+    //-------------------------------------------
+    <string name="p1">0000</string>
+    <string name="p2">0000</string>
+    <string name="p3">0000</string>
+    <string name="p4">0000</string>
+    <string name="p5">0000</string>
+    <string name="p6">0000</string>
+    <string name="p7">0000</string>
+    <string name="p8">0000</string>
+    //-------------------------------------------
+    <string name="puntbio">0000</string>
+    <string name="puntuniv">0000</string>
+    <string name="puntzoo">0000</string>
+    <string name="puntfilo">0000</string>
+    <string name="punt">0000</string>
+    <string name="puntfis">0000</string>
+    <string name="puntgeo">0000</string>
+    <string name="puntcomp">0000</string>
+    <string name="puntquim">0000</string>
+    <string name="puntmat">0000</string>
+    <string name="punthis">0000</string>
+    <string name="puntlit">0000</string>
+    <string name="puntmit">0000</string>
+
+    //PERFIL STRINGS
+    <string name="total_puntos">Total: </string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    //EXTRAS
+    <string name="tests">Tests</string>
+    <string name="puntuaciones">Puntuaciones</string>
+    <string name="perfil">Perfil</string>
+    <string name="buscar">Buscar</string>
+    <string name="toque_boton_iniciar">Toque el botón para iniciar</string>
+    <string name="volver">Volver</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="desliza">Desliza hacia abajo para ver mas</string>
+    <string name="prox">¡PROXIMAMENTE!</string>
+    <string name="temas">Temas</string>
+
+    //DESCRIPCIONES
+    <string name="d1">Descripción 1</string>
+    <string name="d2">Descripción 2</string>
+    <string name="d3">Descripción 3</string>
+    <string name="d4">Descripción 4</string>
+    <string name="d5">Descripción 5</string>
+    <string name="d6">Descripción 6</string>
+    <string name="d7">Descripción 7</string>
+    <string name="d8">Descripción 8</string>
+    <string name="d9">Descripción 9</string>
+    <string name="d10">Descripción 10</string>
+    <string name="d11">Descripción 11</string>
+    <string name="d12">Descripción 12</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>
