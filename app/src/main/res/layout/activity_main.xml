@@ -12,7 +12,7 @@
     <LinearLayout
         android:id="@+id/lyPrin"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="140dp"
         android:backgroundTint="@color/principal_color"
         android:background="@drawable/layout_principal_curvasabajo"
         android:gravity="center_horizontal"
@@ -30,12 +30,12 @@
 
         <ImageView
             android:id="@+id/imgClass"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_marginTop="-4dp"
             app:srcCompat="@drawable/logotipo1" />
         <TextView
-            android:layout_marginTop="-6dp"
+            android:layout_marginTop="-2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
@@ -136,7 +136,7 @@
         android:id="@+id/imgInfo"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:srcCompat="@drawable/info_blue"
+        app:srcCompat="@drawable/ic_info"
         android:layout_marginTop="50dp"/>
 
 </LinearLayout>

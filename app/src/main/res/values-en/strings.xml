@@ -78,7 +78,9 @@
     <string name="puntmit">0000</string>
 
     //PERFIL STRINGS
-    <string name="total_puntos">Total: </string>
+    <string name="total_puntos">Total score: </string>
+    <string name="total_partidas">Total matches: </string>
+    <string name="cantidad_partidas">0000: </string>
     <string name="cerrar_sesion">Log Out</string>
     //EXTRAS
     <string name="tests">Tests</string>
