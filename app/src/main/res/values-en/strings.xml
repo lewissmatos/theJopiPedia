@@ -85,7 +85,7 @@
     //EXTRAS
     <string name="tests">Tests</string>
     <string name="puntuaciones">Scores</string>
-    <string name="perfil">Profile</string>
+    <string name="cuenta">Account</string>
     <string name="buscar">Search</string>
     <string name="toque_boton_iniciar">Tap the button to start</string>
     <string name="volver">Back</string>

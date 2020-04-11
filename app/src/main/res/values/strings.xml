@@ -82,7 +82,7 @@
     //EXTRAS
     <string name="tests">Tests</string>
     <string name="puntuaciones">Puntuaciones</string>
-    <string name="perfil">Perfil</string>
+    <string name="cuenta">Cuenta</string>
     <string name="buscar">Buscar</string>
     <string name="toque_boton_iniciar">Toque el botón para iniciar</string>
     <string name="volver">Volver</string>

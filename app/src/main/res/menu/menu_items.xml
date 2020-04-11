@@ -18,7 +18,7 @@
     <item
         android:id="@+id/perfil"
         android:icon="@drawable/cuentanew"
-        android:title="@string/perfil">
+        android:title="@string/cuenta">
 
     </item>
 
