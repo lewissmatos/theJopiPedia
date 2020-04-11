@@ -32,13 +32,14 @@
 
             <Button
                 android:id="@+id/btnVolver"
-                android:layout_width="69dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/degradereglayoutprin"
+                android:layout_width="61dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_btnback"
                 android:drawableLeft="@drawable/arrow_back"
+                android:drawablePadding="-6dp"
                 android:text="@string/volver"
-                android:textColor="@color/nocturne"
+                android:textColor="@color/light_texts_color"
                 android:textSize="10dp">
 
             </Button>
@@ -56,17 +57,17 @@
                 android:id="@+id/txtTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="26dp"
+                android:layout_marginTop="4dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="@string/bio"
                 android:textColor="@color/bio"
-                android:textSize="26dp" />
+                android:textSize="30dp" />
 
 
             <ImageView
                 android:id="@+id/img"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/bio_dna_128" />
 
