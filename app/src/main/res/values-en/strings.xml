@@ -82,6 +82,9 @@
     <string name="total_partidas">Total matches: </string>
     <string name="cantidad_partidas">0000: </string>
     <string name="cerrar_sesion">Log Out</string>
+    <string name="mis_puntos">My score</string>
+    <string name="mis_apuntes">Saved</string>
+
     //EXTRAS
     <string name="tests">Tests</string>
     <string name="puntuaciones">Scores</string>
@@ -91,6 +94,7 @@
     <string name="volver">Back</string>
     <string name="comenzar">Start</string>
     <string name="desliza">Slide down to see more</string>
+    <string name="visualiza">View the highest scores</string>
     <string name="prox">COMING SOON!</string>
     <string name="temas">Themes</string>
     //DESCRIPCIONES

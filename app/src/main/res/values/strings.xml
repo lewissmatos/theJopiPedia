@@ -79,6 +79,8 @@
     <string name="total_partidas">Partidas jugadas: </string>
     <string name="cantidad_partidas">0000: </string>
     <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="mis_puntos">Mi puntuación</string>
+    <string name="mis_apuntes">Apuntes</string>
     //EXTRAS
     <string name="tests">Tests</string>
     <string name="puntuaciones">Puntuaciones</string>
@@ -88,6 +90,7 @@
     <string name="volver">Volver</string>
     <string name="comenzar">Comenzar</string>
     <string name="desliza">Desliza hacia abajo para ver mas</string>
+    <string name="visualiza">Visializa las puntuaciones mas altas</string>
     <string name="prox">¡PROXIMAMENTE!</string>
     <string name="temas">Temas</string>
 
@@ -104,6 +107,9 @@
     <string name="d10">Descripción 10</string>
     <string name="d11">Descripción 11</string>
     <string name="d12">Descripción 12</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

@@ -14,11 +14,14 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.thejopipedia.RecylclerViewAdapter.Perfil;
 import com.example.thejopipedia.RecylclerViewAdapter.PerfilRecylclerViewAdapter;
 import com.example.thejopipedia.RecylclerViewAdapter.RecylclerViewAdapter;
 import com.example.thejopipedia.RecylclerViewAdapter.Tema;
+import com.example.thejopipedia.RecylclerViewAdapter.ViewPagerAdapter;
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -35,7 +38,9 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
     private FirebaseAuth mAuth;
     private Button btnLogOut;
     AlertDialog.Builder opdialog;
-    private RecyclerView recyclerView2;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private ViewPagerAdapter adapter;
 
 
     @Override
@@ -49,6 +54,9 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
         txtNom = view.findViewById(R.id.txtNom);
         txtUser = view.findViewById(R.id.txtUser);
         btnLogOut = view.findViewById(R.id.btnLogOut);
+
+        viewPager = view.findViewById(R.id.viewPager);
+        tabLayout = view.findViewById(R.id.tabLayout);
 
         btnLogOut.setOnClickListener(this);
 
@@ -69,16 +77,27 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
 
         });
 
-        recyclerView2 = view.findViewById(R.id.recyclerView2);
-        recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
+        viewPager.setAdapter(new ViewPagerAdapter(getFragmentManager(), tabLayout.getTabCount()));
 
-        recyclerView2.setAdapter(new PerfilRecylclerViewAdapter(getPerfilList(), getContext()));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
 
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+            viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         return view;
-
     }
-
-
 
     @Override
     public void onClick(View v) {
@@ -103,22 +122,5 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
                 break;
         }
     }
-    private ArrayList<Perfil> getPerfilList(){
-        ArrayList<Perfil> perfil = new ArrayList<>();
 
-        perfil.add(new Perfil(R.drawable.bio_dna_128, R.string.bio, R.string.puntbio, R.color.bioclaro));
-        perfil.add(new Perfil(R.drawable.galaxy_128, R.string.univ, R.string.puntuniv, R.color.univclaro));
-        perfil.add(new Perfil(R.drawable.anim_128, R.string.zoo, R.string.puntzoo, R.color.zooclaro));
-        perfil.add(new Perfil(R.drawable.think_128, R.string.filo,R.string.puntfilo, R.color.filoclaro));
-        perfil.add(new Perfil(R.drawable.atom_128, R.string.fis, R.string.puntfis, R.color.fisclaro));
-        perfil.add(new Perfil(R.drawable.globe_128, R.string.geo, R.string.puntgeo, R.color.geoclaro));
-        perfil.add(new Perfil(R.drawable.computer_128, R.string.comp, R.string.puntcomp, R.color.compclaro));
-        perfil.add(new Perfil(R.drawable.test_128, R.string.quim, R.string.quim, R.color.quimclaro));
-        perfil.add(new Perfil(R.drawable.num_128, R.string.mat, R.string.puntmat, R.color.matclaro));
-        perfil.add(new Perfil(R.drawable.sword_128, R.string.his, R.string.punthis, R.color.hisclaro));
-        perfil.add(new Perfil(R.drawable.green_book_128, R.string.lit,R.string.puntlit, R.color.litclaro));
-        perfil.add(new Perfil(R.drawable.temple_128, R.string.mit, R.string.puntmit, R.color.relclaro));
-
-        return perfil;
-    }
 }
