@@ -16,7 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="210dp"
-            android:backgroundTint="@color/dark_texts_color"
+            android:backgroundTint="@color/nocturne"
             android:background="@drawable/layout_principal_curvasabajo"
             android:gravity="center_horizontal"
             android:orientation="vertical">
@@ -55,7 +55,7 @@
                         android:id="@+id/imgUser1"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:layout_marginTop="6dp"
+                        android:layout_marginTop="4dp"
                         app:srcCompat="@drawable/account_200p" />
                     <TextView
                         android:id="@+id/txtNom"
@@ -88,7 +88,7 @@
                         android:id="@+id/btnLogOut"
                         android:layout_width="74dp"
                         android:layout_height="40dp"
-                        android:layout_marginTop="14dp"
+                        android:layout_marginTop="12dp"
                         android:background="@drawable/degradereglayoutprin"
                         android:drawableLeft="@drawable/logoutblack"
                         android:paddingStart="4dp"
@@ -102,10 +102,12 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="247dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/layout_light_curvasabajo"
+                android:backgroundTint="@color/light_texts_color"
                 android:gravity="center_horizontal"
-                android:layout_marginTop="2dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -113,9 +115,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-smallcaps"
-                    android:text="@string/total_puntos"
                     android:paddingEnd="10dp"
-                    android:textColor="@color/light_texts_color"
+                    android:text="@string/total_puntos"
+                    android:textColor="@color/nocturne"
                     android:textSize="20sp" />
 
                 <TextView
@@ -123,7 +125,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0000"
-                    android:textColor="@color/light_texts_color"
+                    android:textColor="@color/nocturne"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>
