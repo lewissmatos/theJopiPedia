@@ -12,14 +12,44 @@
         android:background="#fff"
         android:gravity="center_horizontal"
         android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/principal_color"
+        android:background="@drawable/layout_principal_curvasabajo"
+        android:gravity="left"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:paddingStart="6dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnVolver"
+                android:layout_width="69dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/degradereglayoutprin"
+                android:drawableLeft="@drawable/arrow_back"
+                android:text="@string/volver"
+                android:textColor="@color/nocturne"
+                android:textSize="10dp">
+
+            </Button>
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/lyPrin"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="130dp"
             android:gravity="center"
-            android:backgroundTint="@color/principal_color"
-            android:background="@drawable/layout_principal_curvasabajo"
             android:orientation="vertical">
 
             <TextView
@@ -42,6 +72,17 @@
 
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
 
         <LinearLayout
 
@@ -81,17 +122,7 @@
 
             </Button>
         </LinearLayout>
-            <Button
-                android:id="@+id/btnVolver"
-                android:layout_width="252dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/degradereglayoutprin"
-                android:text="@string/volver"
-                android:textColor="@color/dark_texts_color"
-                android:textSize="16dp">
 
-            </Button>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

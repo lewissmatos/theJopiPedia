@@ -46,12 +46,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="12dp"
                     android:fontFamily="sans-serif-smallcaps"
                     android:text="Titulo"
                     android:textStyle="bold"
-                    android:textColor="@color/light_texts_color"
-                    android:textSize="28sp" />
+                    android:textColor="@color/nocturne"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/puntuacion"
@@ -63,8 +63,8 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:text="0000"
                     android:layout_marginTop="2dp"
-                    android:textColor="@color/light_texts_color"
-                    android:textSize="20sp"
+                    android:textColor="@color/dark_texts_color"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
                 android:layout_alignParentBottom="true"
-                android:background="@color/light_texts_color"
+                android:background="@color/nocturne"
                 android:orientation="horizontal">
 
             </LinearLayout>
