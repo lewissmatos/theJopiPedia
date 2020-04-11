@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText edUser, edPass;
     private Button btnInic,  btnReg;
     private String us, pass;
-    private TextView txtJP, devs;
+    private TextView txtJP;
     private ProgressDialog dialog;
     private ImageView imgClass, imgInfo;
     AlertDialog.Builder opdialog;
@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imgClass=findViewById(R.id.imgClass);
         imgInfo=findViewById(R.id.imgInfo);
         txtJP=findViewById(R.id.txtJP);
-        devs=findViewById(R.id.devs);
         //ONCLICKS
         edUser.setOnClickListener(this);
         edPass.setOnClickListener(this);
@@ -59,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imgClass.setOnClickListener(this);
         imgInfo.setOnClickListener(this);
         txtJP.setOnClickListener(this);
-        devs.setOnClickListener(this);
     }
 
     @Override
@@ -99,7 +97,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.imgClass:
             case R.id.txtJP:
-            case R.id.devs:
                 Toast.makeText(MainActivity.this, "By: Lewis Matos y Eiron Diaz", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.imgInfo:

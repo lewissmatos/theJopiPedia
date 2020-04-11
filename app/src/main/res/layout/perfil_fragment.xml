@@ -15,14 +15,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="210dp"
+            android:backgroundTint="@color/dark_texts_color"
             android:background="@drawable/layout_principal_curvasabajo"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <LinearLayout
+                android:layout_marginTop="24dp"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="150dp"
                 android:gravity="left"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toTopOf="parent"
@@ -38,25 +40,30 @@
                         android:id="@+id/imgUser"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        app:srcCompat="@drawable/ic_person_black_24dp" />
-
+                        />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center_vertical"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
+                    <ImageView
+                        android:id="@+id/imgUser1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="6dp"
+                        app:srcCompat="@drawable/account_200p" />
                     <TextView
                         android:id="@+id/txtNom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="-4dp"
                         android:text="-"
-                        android:textColor="@color/dark_texts_color"
+                        android:textColor="@color/principal_color"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -66,13 +73,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:text="-"
-                        android:textColor="@color/dark_texts_color"
+                        android:textColor="@color/principal_color"
                         android:textSize="14dp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="240dp"
-                    android:layout_height="70dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal">
@@ -81,12 +88,12 @@
                         android:id="@+id/btnLogOut"
                         android:layout_width="74dp"
                         android:layout_height="40dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="14dp"
                         android:background="@drawable/degradereglayoutprin"
                         android:drawableLeft="@drawable/logoutblack"
                         android:paddingStart="4dp"
                         android:text="@string/cerrar_sesion"
-                        android:textColor="@color/dark_texts_color"
+                        android:textColor="@color/light_texts_color"
                         android:textSize="10sp">
 
                     </Button>
@@ -96,9 +103,10 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/txtTotal"
@@ -106,7 +114,8 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/total_puntos"
-                    android:textColor="#2c2c2c"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/light_texts_color"
                     android:textSize="20sp" />
 
                 <TextView
@@ -114,8 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0000"
-                    android:layout_marginTop="2dp"
-                    android:textColor="@color/dark_texts_color"
+                    android:textColor="@color/light_texts_color"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>

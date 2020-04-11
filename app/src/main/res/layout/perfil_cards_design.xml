@@ -11,7 +11,7 @@
         android:layout_height="110dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        app:cardElevation="4dp"
+        app:cardElevation="1dp"
         app:cardUseCompatPadding="true"
         app:cardCornerRadius="20dp">
 
@@ -50,7 +50,7 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:text="Titulo"
                     android:textStyle="bold"
-                    android:textColor="#fff"
+                    android:textColor="@color/light_texts_color"
                     android:textSize="28sp" />
 
                 <TextView
@@ -63,7 +63,7 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:text="0000"
                     android:layout_marginTop="2dp"
-                    android:textColor="#fff"
+                    android:textColor="@color/light_texts_color"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
                 android:layout_alignParentBottom="true"
-                android:background="#FFFFFF"
+                android:background="@color/light_texts_color"
                 android:orientation="horizontal">
 
             </LinearLayout>

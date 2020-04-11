@@ -9,32 +9,46 @@
         android:id="@+id/lyFondoPrin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#fff"
+        android:background="@color/trns"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/lyPrin"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="120dp"
+            android:backgroundTint="@color/principal_color"
             android:background="@drawable/layout_principal_curvasabajo"
             android:gravity="center_horizontal"
             android:orientation="vertical">
             <LinearLayout
                 android:paddingLeft="36dp"
                 android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:gravity="left">
+
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
                     android:text="@string/tabla_puntos"
+                    android:layout_marginTop="16dp"
                     android:textStyle="bold"
-                    android:textColor="@color/dark_texts_color"
+                    android:textColor="@color/nocturne"
                     android:textSize="26sp" />
-
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="@string/desliza"
+                    android:textColor="@color/nocturne"
+                    android:textSize="16sp" />
             </LinearLayout>
 
         </LinearLayout>

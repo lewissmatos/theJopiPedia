@@ -35,7 +35,7 @@
                 android:id="@+id/desc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#fff"
+                android:textColor="@color/light_texts_color"
                 android:text="Descripcion"
                 android:layout_toRightOf="@id/imgage"
                 android:fontFamily="sans-serif-smallcaps"
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
                 android:layout_alignParentBottom="true"
-                android:background="#FFFFFF"
+                android:background="@color/light_texts_color"
                 android:layout_marginBottom="4dp"
                 android:orientation="horizontal">
 

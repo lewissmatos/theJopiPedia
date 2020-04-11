@@ -9,10 +9,13 @@
     <color name="verde_oscuro">#327034</color>
     <color name="transparent">#CCFAFAFA</color>
     <color name="trans">#1AFFFFFF</color>
-
+    <color name="trns">#00FFFFFF</color>
     //--------------------------------------------
     <color name="principal_color">#F4F4F4</color>
     <color name="dark_texts_color">#515151</color>
+    <color name="nocturne">#484F51</color>
+    <color name="light_texts_color">#FFFFFF</color>
+    <color name="gray_texts_color">#D1D1D1</color>
     //--------------------------------------------
 
     //COLORES DE TEMAS

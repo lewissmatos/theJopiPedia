@@ -22,26 +22,28 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="130dp"
             android:layout_gravity="center_horizontal"
+            android:backgroundTint="#69BD76"
             android:background="@drawable/layout_principal_curvasabajo"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="100dp"
+                android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginTop="20dp"
                 android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/reg_multi" />
+                app:srcCompat="@drawable/reg" />
 
             <TextView
                 android:id="@+id/txtRegis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="-14dp"
+                android:layout_marginTop="-10dp"
                 android:text="@string/agregar_usuario"
                 android:fontFamily="sans-serif-smallcaps"
-                android:textColor="#69BD76"
+                android:textColor="@color/light_texts_color"
                 android:textSize="26dp" />
         </LinearLayout>
 
