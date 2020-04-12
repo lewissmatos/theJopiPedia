@@ -20,7 +20,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-
         switch (position){
             case 0:
                 return new Perfil_Puntos_Fragment();

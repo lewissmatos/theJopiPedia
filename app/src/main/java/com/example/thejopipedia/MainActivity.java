@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (us.isEmpty()||pass.isEmpty())
                 {
                     dialog.dismiss();
-                    Toast.makeText(this, "Debes llenar todos campos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
                 }
                 else {
                     mAuth.signInWithEmailAndPassword(us, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             }
                             else {
                                 dialog.dismiss();
-                                Toast.makeText(MainActivity.this, "Correo o contraseña invalido", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, R.string.corr_pass_invalido, Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

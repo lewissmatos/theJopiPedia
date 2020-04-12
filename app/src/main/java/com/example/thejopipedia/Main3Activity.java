@@ -81,17 +81,17 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
                 if (us.isEmpty()||pass.isEmpty()||nom.isEmpty()||rpass.isEmpty())
                 {
                     dialog.dismiss();
-                    Toast.makeText(this, "Debes llenar todos parámetros", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
                 }
                 else {
                     if (edPass.length() < 6) {
                         dialog.dismiss();
-                        Toast.makeText(this, "La contraseña debe tener más de 6 carácteres", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.contr_6_car, Toast.LENGTH_SHORT).show();
                     }
                     else {
                     if (!edPass.getText().toString().equals(edRPass.getText().toString())) {
                         dialog.dismiss();
-                        Toast.makeText(this, "Las contrseñas no coinciden", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.contr_no_coin, Toast.LENGTH_SHORT).show();
                         }
 
                     else {
@@ -110,7 +110,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
                                                 dialog.dismiss();
-                                                Toast.makeText(getApplicationContext(), "Usuario agregado correctamente", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(getApplicationContext(), R.string.usuario_agr_corr, Toast.LENGTH_SHORT).show();
                                                 startActivity(new Intent(Main3Activity.this, MainActivity.class));
                                                 finish();
                                             }
@@ -121,11 +121,11 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
 
                                     if(task.getException() instanceof FirebaseAuthUserCollisionException){
                                         dialog.dismiss();
-                                        Toast.makeText(Main3Activity.this, "Ese correo ya existe", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Main3Activity.this, R.string.corr_exist, Toast.LENGTH_SHORT).show();
                                     }
                                     else{
                                         dialog.dismiss();
-                                        Toast.makeText(Main3Activity.this, "No se pudo registrar", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Main3Activity.this, R.string.no_reg, Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             }

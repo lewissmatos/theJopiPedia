@@ -75,12 +75,26 @@
     <string name="puntmit">0000</string>
 
     //PERFIL STRINGS
+    <string name="desea_cerrar">¿Desea cerrar seisón?</string>
+    <string name="advertencia">¡ADVERTENCIA!</string>
+    <string name="aceptar_sesion">ACEPTAR</string>
+    <string name="cancelar_sesion">CANCELAR</string>
+    <string name="llenar_campos">Debes llenar todos campos</string>
+    <string name="corr_pass_invalido">Correo o contraseña invalido</string>
+    <string name="contr_6_car">La contraseña debe tener al menos 6 carácteres</string>
+    <string name="contr_no_coin">Las contrseñas no coinciden</string>
+    <string name="usuario_agr_corr">Usuario agregado correctamente</string>
+    <string name="corr_exist">Ese correo ya existe</string>
+    <string name="no_reg">No se pudo registrar</string>
+    //-------------------------------------------------
     <string name="total_puntos">Total de puntos: </string>
     <string name="total_partidas">Partidas jugadas: </string>
-    <string name="cantidad_partidas">0000: </string>
+    <string name="cantidad_partidas">0000</string>
     <string name="cerrar_sesion">Cerrar sesión</string>
-    <string name="mis_puntos">Mi puntuación</string>
-    <string name="mis_apuntes">Apuntes</string>
+    <string name="puntuacion">Mi puntuación</string>
+    <string name="apuntes">Apuntes</string>
+    <string name="mis_apuntes">Mis apuntes</string>
+    <string name="info_interes">Información de interés</string>
     //EXTRAS
     <string name="tests">Tests</string>
     <string name="puntuaciones">Puntuaciones</string>
@@ -108,8 +122,6 @@
     <string name="d11">Descripción 11</string>
     <string name="d12">Descripción 12</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

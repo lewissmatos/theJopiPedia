@@ -95,8 +95,9 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
 
             }
         });
+
             viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        return view;
+            return view;
     }
 
     @Override
@@ -104,15 +105,15 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.btnLogOut:
                 opdialog=new AlertDialog.Builder(getContext());
-                    opdialog.setMessage("¿Deseas cerrar sesion?")
-                        .setTitle("ADVERTENCIA")
-                        .setPositiveButton("ACEPTAR", new DialogInterface.OnClickListener() {
+                    opdialog.setMessage(R.string.desea_cerrar)
+                        .setTitle(R.string.advertencia)
+                        .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 mAuth.signOut();
                                 startActivity(new Intent(getContext(), MainActivity.class));
                             }
-                        }).setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
+                        }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                     }

@@ -78,13 +78,26 @@
     <string name="puntmit">0000</string>
 
     //PERFIL STRINGS
+    <string name="desea_cerrar">Do you want to log out?</string>
+    <string name="advertencia">¡WARNING!</string>
+    <string name="aceptar_sesion">ACCEPT</string>
+    <string name="cancelar_sesion">CANCEL</string>
+    <string name="llenar_campos">Debes llenar todos campos</string>
+    <string name="corr_pass_invalido">Invalid email or password</string>
+    <string name="contr_6_car">Password must to at least 6 characters</string>
+    <string name="contr_no_coin">Passwords dont match</string>
+    <string name="usuario_agr_corr">User added successfully</string>
+    <string name="corr_exist">This email already exist</string>
+    <string name="no_reg">could not register</string>
+    //-------------------------------------------------
     <string name="total_puntos">Total score: </string>
     <string name="total_partidas">Total matches: </string>
-    <string name="cantidad_partidas">0000: </string>
+    <string name="cantidad_partidas">0000</string>
     <string name="cerrar_sesion">Log Out</string>
-    <string name="mis_puntos">My score</string>
-    <string name="mis_apuntes">Saved</string>
-
+    <string name="puntuacion">My score</string>
+    <string name="apuntes">Notes</string>
+    <string name="mis_apuntes">My notes</string>
+    <string name="info_interes">Interest information</string>
     //EXTRAS
     <string name="tests">Tests</string>
     <string name="puntuaciones">Scores</string>

@@ -52,10 +52,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="-"
+                        android:text="@string/cantidad_partidas"
                         android:textStyle="bold"
                         android:textColor="@color/principal_color"
-                        android:textSize="14sp" />
+                        android:textSize="10sp" />
 
                 </LinearLayout>
 
@@ -106,7 +106,6 @@
                         android:drawableLeft="@drawable/logoutblack"
                         android:drawablePadding="-12dp"
                         android:paddingStart="4dp"
-
                         android:text="@string/cerrar_sesion"
                         android:textColor="@color/light_texts_color"
                         android:textSize="10sp" />
@@ -158,14 +157,14 @@
                 android:id="@+id/mis_puntos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/mis_puntos"
+                android:text="@string/puntuacion"
                 />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/mis_apuntes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/mis_apuntes" />
+                android:text="@string/apuntes" />
 
         </com.google.android.material.tabs.TabLayout>
 
@@ -173,7 +172,6 @@
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 >
             </androidx.viewpager.widget.ViewPager>
     </LinearLayout>

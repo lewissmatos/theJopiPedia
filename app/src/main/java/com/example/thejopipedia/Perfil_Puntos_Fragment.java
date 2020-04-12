@@ -24,7 +24,6 @@ import java.util.ArrayList;
 
 public class Perfil_Puntos_Fragment extends Fragment {
 
-
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
 
@@ -37,7 +36,6 @@ public class Perfil_Puntos_Fragment extends Fragment {
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
 
         recyclerView2 = view.findViewById(R.id.recyclerView2);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -55,12 +53,13 @@ public class Perfil_Puntos_Fragment extends Fragment {
         perfil.add(new Perfil(R.drawable.atom_128, R.string.fis, R.string.puntfis, R.color.fisclaro));
         perfil.add(new Perfil(R.drawable.globe_128, R.string.geo, R.string.puntgeo, R.color.geoclaro));
         perfil.add(new Perfil(R.drawable.computer_128, R.string.comp, R.string.puntcomp, R.color.compclaro));
-        perfil.add(new Perfil(R.drawable.test_128, R.string.quim, R.string.quim, R.color.quimclaro));
+        perfil.add(new Perfil(R.drawable.test_128, R.string.quim, R.string.puntquim, R.color.quimclaro));
         perfil.add(new Perfil(R.drawable.num_128, R.string.mat, R.string.puntmat, R.color.matclaro));
         perfil.add(new Perfil(R.drawable.sword_128, R.string.his, R.string.punthis, R.color.hisclaro));
         perfil.add(new Perfil(R.drawable.green_book_128, R.string.lit,R.string.puntlit, R.color.litclaro));
         perfil.add(new Perfil(R.drawable.temple_128, R.string.mit, R.string.puntmit, R.color.relclaro));
 
         return perfil;
+
     }
 }
