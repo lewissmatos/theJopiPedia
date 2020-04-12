@@ -1,27 +1,27 @@
 package com.example.thejopipedia;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApiNotAvailableException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,21 +30,29 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
     private FirebaseAuth mAuth;
     private ProgressDialog dialog;
     private DatabaseReference mDatabase;
-    private Button btnCancel, btnReg;
+    private Button btnReg;
     private EditText edUser, edPass, edRPass, edNom;
     private String us, pass, mat, nom, rpass;
+    ImageView btnVolver;
+    private Window window;
     @Override
     @SuppressLint("SourceLockedOrientationActivity")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
+        String colorbarra = "#69BD76";
+
+        this.window = getWindow();
+        //barcolor
+        window.setStatusBarColor(Color.parseColor(colorbarra));
+
         mAuth = FirebaseAuth.getInstance();
         mDatabase= FirebaseDatabase.getInstance().getReference();
 
         // Initialize Firebase Auth
         //FIND VIEW ID
-        btnCancel = findViewById(R.id.btnCancel);
+        btnVolver = findViewById(R.id.btnVolver);
         btnReg = findViewById(R.id.btnReg);
         edUser = findViewById(R.id.edUser);
         edNom = findViewById(R.id.edNom);
@@ -55,8 +63,8 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
 
         //ONCLICS
         btnReg.setOnClickListener(this);
-        btnCancel.setOnClickListener(this);
-        btnCancel.setOnClickListener(this);
+        btnVolver.setOnClickListener(this);
+        btnVolver.setOnClickListener(this);
         edUser.setOnClickListener(this);
         edNom.setOnClickListener(this);
         edPass.setOnClickListener(this);
@@ -66,7 +74,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btnCancel:
+            case R.id.btnVolver:
                 startActivity(new Intent(this, MainActivity.class));
                 finish();
                 break;

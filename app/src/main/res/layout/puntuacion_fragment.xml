@@ -16,34 +16,32 @@
         <LinearLayout
             android:id="@+id/lyPrin"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="100dp"
             android:backgroundTint="@color/principal_color"
             android:background="@drawable/layout_principal_curvasabajo"
             android:gravity="center_horizontal"
             android:orientation="vertical">
             <LinearLayout
-                android:paddingLeft="36dp"
+                android:paddingLeft="26dp"
                 android:layout_width="match_parent"
-                android:layout_marginTop="30dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="left">
 
 
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tabla_puntos"
                     android:layout_marginTop="16dp"
+                    android:text="@string/tabla_puntos"
                     android:textStyle="bold"
                     android:textColor="@color/nocturne"
-                    android:textSize="26sp" />
+                    android:textSize="38sp" />
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="8dp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/visualiza"

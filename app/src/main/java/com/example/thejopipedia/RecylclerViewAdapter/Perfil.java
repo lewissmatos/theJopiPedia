@@ -4,10 +4,10 @@ public class Perfil {
 
     private int image;
     private int tittle;
-    private int puntuacion;
+    private String puntuacion;
     private int color;
 
-    public Perfil(int image, int tittle, int puntuacion, int color) {
+    public Perfil(int image, int tittle, String puntuacion, int color) {
         this.image = image;
         this.tittle = tittle;
         this.puntuacion = puntuacion;
@@ -38,11 +38,11 @@ public class Perfil {
         this.color = color;
     }
 
-    public int getPuntuacion() {
+    public String getPuntuacion() {
         return puntuacion;
     }
 
-    public void setPuntuacion(int desc) {
+    public void setPuntuacion(String desc) {
         this.puntuacion = desc;
     }
 }

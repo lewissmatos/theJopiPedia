@@ -3,16 +3,17 @@ package com.example.thejopipedia;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.thejopipedia.RecylclerViewAdapter.ViewPagerAdapter;
@@ -24,7 +25,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class PerfilFragment extends Fragment implements View.OnClickListener {
+public class CuentaActivity extends AppCompatActivity implements OnClickListener {
+
     private TextView txtNom, txtUser;
 
     private DatabaseReference mDatabase;
@@ -35,25 +37,31 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
     private ViewPager viewPager;
     private Window window;
     private ViewPagerAdapter adapter;
-
+    ImageView btnVolver;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.perfil_fragment, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_cuenta);
 
-        //-----------------------------------
+        String colorbarra = "#484F51";
+
+        this.window = getWindow();
+        //barcolor
+        window.setStatusBarColor(Color.parseColor(colorbarra));
 
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        txtNom = view.findViewById(R.id.txtNom);
-        txtUser = view.findViewById(R.id.txtUser);
-        btnLogOut = view.findViewById(R.id.btnLogOut);
-        viewPager = view.findViewById(R.id.viewPager);
-        tabLayout = view.findViewById(R.id.tabLayout);
+        txtNom = findViewById(R.id.txtNom);
+        txtUser = findViewById(R.id.txtUser);
+        btnLogOut = findViewById(R.id.btnLogOut);
+        btnVolver = findViewById(R.id.btnVolver);
+        viewPager = findViewById(R.id.viewPager);
+        tabLayout = findViewById(R.id.tabLayout);
         btnLogOut.setOnClickListener(this);
+        btnVolver.setOnClickListener(this);
 
         String id = mAuth.getCurrentUser().getUid();
         mDatabase.child("Users").child(id).addValueEventListener(new ValueEventListener() {
@@ -71,7 +79,7 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
             }
 
         });
-        viewPager.setAdapter(new ViewPagerAdapter(getChildFragmentManager(), tabLayout.getTabCount()));
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount()));
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -91,22 +99,23 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-            viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-            return view;
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
     }
+
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnLogOut:
-                opdialog=new AlertDialog.Builder(getContext());
-                    opdialog.setMessage(R.string.desea_cerrar)
+                opdialog = new AlertDialog.Builder(this);
+                opdialog.setMessage(R.string.desea_cerrar)
                         .setTitle(R.string.advertencia)
                         .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 mAuth.signOut();
-                                startActivity(new Intent(getContext(), MainActivity.class));
+                                startActivity(new Intent(CuentaActivity.this, MainActivity.class));
+                                finish();
                             }
                         }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
                     @Override
@@ -116,7 +125,10 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
                 opdialog.create();
                 opdialog.show();
                 break;
+            case R.id.btnVolver:
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
+                break;
         }
     }
-
 }

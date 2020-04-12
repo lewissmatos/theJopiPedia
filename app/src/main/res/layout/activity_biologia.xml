@@ -6,19 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".BiologiaActivity">
     <LinearLayout
-        android:id="@+id/lyFondoPrin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#fff"
         android:gravity="center_horizontal"
         android:orientation="vertical">
     <LinearLayout
-        android:layout_marginTop="24dp"
+        android:id="@+id/lyPrin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/principal_color"
         android:background="@drawable/layout_principal_curvasabajo"
-        android:gravity="left"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         tools:context=".MainActivity">
@@ -27,29 +26,20 @@
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:gravity="left"
-            android:paddingStart="6dp"
             android:orientation="vertical">
 
-            <Button
+            <ImageView
                 android:id="@+id/btnVolver"
-                android:layout_width="61dp"
-                android:layout_height="38dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/background_btnback"
-                android:drawableLeft="@drawable/arrow_back"
-                android:drawablePadding="-6dp"
-                android:text="@string/volver"
-                android:textColor="@color/dark_texts_color"
-                android:textSize="10dp">
-
-            </Button>
+                app:srcCompat="@drawable/arrow_back" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lyPrin"
             android:layout_width="200dp"
-            android:layout_height="130dp"
+            android:layout_height="120dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -57,18 +47,20 @@
                 android:id="@+id/txtTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="-2dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="@string/bio"
-                android:textColor="@color/bio"
+                style="bold"
+                android:textColor="@color/light_texts_color"
                 android:textSize="30dp" />
 
 
             <ImageView
                 android:id="@+id/img"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="-2dp"
                 app:srcCompat="@drawable/bio_dna_128" />
 
 

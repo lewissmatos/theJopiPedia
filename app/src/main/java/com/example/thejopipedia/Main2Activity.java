@@ -1,32 +1,15 @@
 package com.example.thejopipedia;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.annotation.SuppressLint;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.ContentProviderClient;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -49,6 +32,11 @@ public class Main2Activity extends AppCompatActivity {
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                     Fragment selectedFragment = null;
 
+                    if (menuItem.getItemId() == R.id.perfil)
+                    {
+                        startActivity(new Intent(Main2Activity.this, CuentaActivity.class));
+                    }
+                    else
                     switch (menuItem.getItemId()){
 
                         case R.id.tests:
@@ -57,13 +45,13 @@ public class Main2Activity extends AppCompatActivity {
                         case R.id.puntuaciones:
                             selectedFragment = new PuntuacionFragment();
                             break;
-                        case R.id.perfil:
-                            selectedFragment = new PerfilFragment();
-                            break;
-                    }
 
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                            selectedFragment).commit();
+                    }
+                    if (menuItem.getItemId() != R.id.perfil)
+                    {
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                                selectedFragment).commit();
+                    }
 
                     return true;
                 }

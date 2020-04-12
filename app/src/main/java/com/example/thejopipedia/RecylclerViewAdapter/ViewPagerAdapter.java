@@ -13,21 +13,21 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     int cantidad;
 
     public ViewPagerAdapter(@NonNull FragmentManager fm, int cantidad) {
-        super(fm);
+        super(fm, cantidad);
         this.cantidad = cantidad;
     }
 
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        switch (position){
-            case 0:
-                return new Perfil_Puntos_Fragment();
-            case 1:
-                return new Perfil_Apuntes_Fragment();
-            default: return null;
-        }
 
+        if (position == 0){
+            return new Perfil_Puntos_Fragment();
+            }
+        else if (position ==1) {
+            return new Perfil_Apuntes_Fragment();
+        }
+        else return null;
     }
 
     @Override

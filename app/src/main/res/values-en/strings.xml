@@ -54,28 +54,6 @@
     <string name="pos7">Seventh score</string>
     <string name="pos8">Eighth score</string>
     //-------------------------------------------
-    <string name="p1">0000</string>
-    <string name="p2">0000</string>
-    <string name="p3">0000</string>
-    <string name="p4">0000</string>
-    <string name="p5">0000</string>
-    <string name="p6">0000</string>
-    <string name="p7">0000</string>
-    <string name="p8">0000</string>
-    //-------------------------------------------
-    <string name="puntbio">0000</string>
-    <string name="puntuniv">0000</string>
-    <string name="puntzoo">0000</string>
-    <string name="puntfilo">0000</string>
-    <string name="punt">0000</string>
-    <string name="puntfis">0000</string>
-    <string name="puntgeo">0000</string>
-    <string name="puntcomp">0000</string>
-    <string name="puntquim">0000</string>
-    <string name="puntmat">0000</string>
-    <string name="punthis">0000</string>
-    <string name="puntlit">0000</string>
-    <string name="puntmit">0000</string>
 
     //PERFIL STRINGS
     <string name="desea_cerrar">Do you want to log out?</string>
@@ -99,7 +77,7 @@
     <string name="mis_apuntes">My notes</string>
     <string name="info_interes">Interest information</string>
     //EXTRAS
-    <string name="tests">Tests</string>
+    <string name="temas">Topics</string>
     <string name="puntuaciones">Scores</string>
     <string name="cuenta">Account</string>
     <string name="buscar">Search</string>
@@ -109,7 +87,6 @@
     <string name="desliza">Slide down to see more</string>
     <string name="visualiza">View the highest scores</string>
     <string name="prox">COMING SOON!</string>
-    <string name="temas">Themes</string>
     //DESCRIPCIONES
     <string name="d1">Description 1</string>
     <string name="d2">Description 2</string>

@@ -4,10 +4,10 @@ public class Tabla {
 
     private int image;
     private int tittle;
-    private int puntuacion;
+    private String puntuacion;
     private int colorbar;
 
-    public Tabla(int image, int tittle, int puntuacion, int colorbar) {
+    public Tabla(int image, int tittle, String puntuacion, int colorbar) {
         this.image = image;
         this.tittle = tittle;
         this.puntuacion = puntuacion;
@@ -38,11 +38,9 @@ public class Tabla {
         this.colorbar = colorbar;
     }
 
-    public int getPuntuacion() {
-        return puntuacion;
-    }
+    public String getPuntuacion() { return puntuacion; }
 
-    public void setPuntuacion(int desc) {
+    public void setPuntuacion(String desc) {
         this.puntuacion = desc;
     }
 }
