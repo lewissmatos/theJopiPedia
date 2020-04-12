@@ -29,8 +29,6 @@ public class CuentaActivity extends AppCompatActivity implements OnClickListener
 
     private TextView txtNom, txtUser;
 
-    private DatabaseReference mDatabase;
-    private FirebaseAuth mAuth;
     private Button btnLogOut;
     AlertDialog.Builder opdialog;
     private TabLayout tabLayout;
@@ -51,8 +49,6 @@ public class CuentaActivity extends AppCompatActivity implements OnClickListener
         window.setStatusBarColor(Color.parseColor(colorbarra));
 
 
-        mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         txtNom = findViewById(R.id.txtNom);
         txtUser = findViewById(R.id.txtUser);
@@ -63,22 +59,7 @@ public class CuentaActivity extends AppCompatActivity implements OnClickListener
         btnLogOut.setOnClickListener(this);
         btnVolver.setOnClickListener(this);
 
-        String id = mAuth.getCurrentUser().getUid();
-        mDatabase.child("Users").child(id).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String nombre = dataSnapshot.child("Nombre").getValue().toString();
-                txtNom.setText(nombre);
-                String email = dataSnapshot.child("Email").getValue().toString();
-                txtUser.setText(email);
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-
-        });
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount()));
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -113,7 +94,7 @@ public class CuentaActivity extends AppCompatActivity implements OnClickListener
                         .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                mAuth.signOut();
+
                                 startActivity(new Intent(CuentaActivity.this, MainActivity.class));
                                 finish();
                             }

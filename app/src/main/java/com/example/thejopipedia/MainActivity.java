@@ -24,7 +24,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private FirebaseAuth mAuth;
     private EditText edUser, edPass;
     private Button btnInic,  btnReg;
     private String us, pass;
@@ -39,8 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         dialog = new ProgressDialog(this);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        // Initialize Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
 
         //FIND VIEW ID
         edUser = findViewById(R.id.edUser);
@@ -75,20 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    mAuth.signInWithEmailAndPassword(us, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                dialog.dismiss();
-                                startActivity(new Intent(MainActivity.this, Main2Activity.class));
-                                finish();
-                            }
-                            else {
-                                dialog.dismiss();
-                                Toast.makeText(MainActivity.this, R.string.corr_pass_invalido, Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
+
                 }
                 break;
             case R.id.btnReg:
@@ -115,16 +99,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
 
-    }
-
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if(mAuth.getCurrentUser()!=null)
-        {
-            startActivity(new Intent(MainActivity.this, Main2Activity.class));
-            finish();
-        }
     }
 }
