@@ -68,7 +68,6 @@ public class BiologiaActivity extends AppCompatActivity implements View.OnClickL
                 this.window = getWindow();
                 //barcolor
                 window.setStatusBarColor(Color.parseColor(barraBio));
-
                 break;
             case 1:
                 lyPrin.setBackgroundTintList(getResources().getColorStateList(R.color.univ99));

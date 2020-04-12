@@ -64,6 +64,8 @@
     <string name="usuario_agr_corr">Usuario agregado correctamente</string>
     <string name="corr_exist">Ese correo ya existe</string>
     <string name="no_reg">No se pudo registrar</string>
+    <string name="no_inic_sesion">No se pudo inciar sesión</string>
+    <string name="no_estab_conex">No se pudo establecer sesión con el servidor</string>
     //-------------------------------------------------
     <string name="total_puntos">Total de puntos: </string>
     <string name="total_partidas">Partidas jugadas: </string>

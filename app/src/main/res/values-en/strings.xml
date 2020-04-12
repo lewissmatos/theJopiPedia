@@ -60,13 +60,15 @@
     <string name="advertencia">¡WARNING!</string>
     <string name="aceptar_sesion">ACCEPT</string>
     <string name="cancelar_sesion">CANCEL</string>
-    <string name="llenar_campos">Debes llenar todos campos</string>
+    <string name="llenar_campos">You must fill all the fields</string>
     <string name="corr_pass_invalido">Invalid email or password</string>
     <string name="contr_6_car">Password must to at least 6 characters</string>
     <string name="contr_no_coin">Passwords dont match</string>
     <string name="usuario_agr_corr">User added successfully</string>
     <string name="corr_exist">This email already exist</string>
     <string name="no_reg">could not register</string>
+    <string name="no_inic_sesion">Could not log in</string>
+    <string name="no_estab_conex">Could not connect to server</string>
     //-------------------------------------------------
     <string name="total_puntos">Total score: </string>
     <string name="total_partidas">Total matches: </string>
