@@ -1,13 +1,27 @@
 package com.example.thejopipedia;
 
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.google.firebase.database.core.Context;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Usuario {
 
-    private int idUsuario;
+    private String idUsuario;
     private String nombre;
     private String correo;
     private String contraseña;
+    private Context context;
 
-    public Usuario(int idUsuario, String nombre, String correo, String contraseña) {
+    public Usuario(Context context, String idUsuario, String nombre, String correo, String contraseña) {
+        this.context = context;
         this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.correo = correo;
@@ -18,22 +32,59 @@ public class Usuario {
     }
 
     public void IniciarSesion(String email, String pass){
-        
+
+        String url = "thejopipedia.000webhostapp.com/wsJSONRegistro.php";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                return super.getParams();
+            }
+        };
     }
 
-    public void Registrar(String nombre, String email, String pass, String rpass){
+    public void Registrar(final String nombre, final String email, final String pass, String rpass){
+        String url = "thejopipedia.000webhostapp.com/wsJSONRegistro.php";
 
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> map = new HashMap<String, String>();
+                map.put("nombre", nombre);
+                map.put("correo", email);
+                map.put("contraseña", pass);
+                return map;
+            }
+        };
     }
 
     public void LogOut(){
 
     }
 
-    public int getIdUsuario() {
+    public String getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdusuario(int idUsuario) {
+    public void setIdusuario(String idUsuario) {
         this.idUsuario = idUsuario;
     }
 
