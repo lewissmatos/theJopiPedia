@@ -3,14 +3,14 @@
 
     <item
         android:id="@+id/tests"
-        android:icon="@drawable/temas_7d"
+        android:icon="@drawable/topics_2"
         android:title="@string/temas">
 
     </item>
 
     <item
         android:id="@+id/puntuaciones"
-        android:icon="@drawable/puntos_7d"
+        android:icon="@drawable/star_circle"
         android:title="@string/puntuaciones">
 
     </item>

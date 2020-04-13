@@ -45,16 +45,16 @@
     <color name="lit99">#995734A5</color>
     <color name="mit99">#99454545</color>
     //COLORES CLAROS PA EL PERFIL
-    <color name="bioclaro">#4DFBA53A</color>
-    <color name="univclaro">#4D5F9E98</color>
-    <color name="zooclaro">#4DD8AA65</color>
-    <color name="filoclaro">#4D637785</color>
+    <color name="bioclaro">#59FBA53A</color>
+    <color name="univclaro">#665F9E98</color>
+    <color name="zooclaro">#66D8AA65</color>
+    <color name="filoclaro">#66637785</color>
     <color name="fisclaro">#4D000000</color>
-    <color name="geoclaro">#4D69EDA1</color>
+    <color name="geoclaro">#4D27C56A</color>
     <color name="compclaro">#4D6B837E</color>
     <color name="quimclaro">#4D0490D1</color>
     <color name="matclaro">#4DEF1515</color>
-    <color name="hisclaro">#4DDFE651</color>
+    <color name="hisclaro">#4DCCD51A</color>
     <color name="litclaro">#4D5734A5</color>
     <color name="mitclaro">#4D454545</color>
     <color name="transparente_puro">#00FFFFFF</color>
@@ -62,7 +62,7 @@
     <color name="gold">#FFBB5A</color>
     <color name="silver">#A8B0DE</color>
     <color name="bronze">#B3907E</color>
-    <color name="gris_tabla">#535353</color>
+    <color name="gris_tabla">#6A6A6A</color>
 
 
 </resources>

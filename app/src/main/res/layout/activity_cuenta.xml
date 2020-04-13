@@ -107,7 +107,7 @@
             <LinearLayout
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/layout_light_curvasabajo"
                 android:backgroundTint="@color/light_texts_color"
                 android:gravity="center_horizontal"
@@ -138,16 +138,16 @@
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:tabIconTint="@color/nocturne"
+            app:tabIndicatorColor="@color/nocturne"
             app:tabSelectedTextColor="@color/nocturne"
-            app:tabTextColor="#99B3B3B3"
-            app:tabIndicatorColor="@color/nocturne">
+            app:tabTextColor="#99B3B3B3">
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/mis_puntos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/puntuacion"
-                />
+                android:text="@string/puntuacion" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/mis_apuntes"

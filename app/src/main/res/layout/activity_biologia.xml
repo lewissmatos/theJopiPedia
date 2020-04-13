@@ -105,12 +105,12 @@
                 android:layout_height="233dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/btnplaybio"
-                android:drawableTop="@drawable/definitelyplaybtn"
-                android:drawablePadding="-60dp"
-                android:paddingTop="-50dp"
+                android:drawableTop="@drawable/play_circle"
+                android:drawablePadding="-20dp"
+                android:paddingTop="20dp"
                 android:text="@string/comenzar"
                 android:textColor="#fff"
-                android:textSize="20sp">
+                android:textSize="18sp">
 
             </Button>
         </LinearLayout>
