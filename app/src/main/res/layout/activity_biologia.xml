@@ -52,7 +52,7 @@
                 android:text="@string/bio"
                 style="bold"
                 android:textColor="@color/light_texts_color"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
 
             <ImageView
@@ -76,29 +76,28 @@
         </LinearLayout>
     </LinearLayout>
 
+        <TextView
+            android:id="@+id/txtEnc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toque_boton_iniciar"
+            android:textColor="@color/dark_texts_color"
+            android:layout_marginTop="4dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
 
         <LinearLayout
 
             android:id="@+id/lybuttons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="80dp"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/txtEnc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/toque_boton_iniciar"
-                android:textColor="@color/dark_texts_color"
-                android:layout_marginTop="4dp"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-            </TextView>
 
             <Button
                 android:id="@+id/btnPlay"
@@ -111,7 +110,7 @@
                 android:paddingTop="-50dp"
                 android:text="@string/comenzar"
                 android:textColor="#fff"
-                android:textSize="20dp">
+                android:textSize="20sp">
 
             </Button>
         </LinearLayout>

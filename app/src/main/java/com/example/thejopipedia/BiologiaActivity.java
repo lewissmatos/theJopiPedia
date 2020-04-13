@@ -114,7 +114,7 @@ public class BiologiaActivity extends AppCompatActivity implements View.OnClickL
                 window.setStatusBarColor(Color.parseColor(barraFis));
                 break;
             case 5:
-                txtTitulo.setTextColor(getResources().getColor(R.color.geo99));
+                lyPrin.setBackgroundTintList(getResources().getColorStateList(R.color.geo99));
                 txtTitulo.setText(R.string.geo);
                 img.setImageResource(R.drawable.globe_128);
                 btnPlay.setBackgroundResource(R.drawable.curvas_marron);
@@ -147,7 +147,7 @@ public class BiologiaActivity extends AppCompatActivity implements View.OnClickL
                 window.setStatusBarColor(Color.parseColor(barraQuim));
                 break;
             case 8:
-                lyPrin.setBackgroundTintList(getResources().getColorStateList(R.color.quim99));
+                lyPrin.setBackgroundTintList(getResources().getColorStateList(R.color.mat99));
                 txtTitulo.setText(R.string.mat);
                 img.setImageResource(R.drawable.num_128);
                 btnPlay.setBackgroundResource(R.drawable.btnplaymat);

@@ -5,5 +5,5 @@
         android:width="2dp"
         android:color="#1C7742"
         ></stroke>
-    <solid android:color="#9969EDA1"/>
+    <solid android:color="@color/geo99"/>
 </shape>
