@@ -100,7 +100,9 @@
     <string name="d10">Descripción 10</string>
     <string name="d11">Descripción 11</string>
     <string name="d12">Descripción 12</string>
-
-
+    //-------------------------------------------
+    <string name="d_salir_s_guar">Desea salir sin guardar</string>
+    <string name="guardado_correctamente">El apunte se ha guardado correctamente</string>
+    <string name="error">Ha ocurrido un error</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

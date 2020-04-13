@@ -13,7 +13,6 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="dialog_fire_missiles" />
-
     //NOMBRES DE LOS TEMAS
     <string name="bio">Biology</string>
     <string name="univ">Universe</string>
@@ -54,7 +53,6 @@
     <string name="pos7">Seventh score</string>
     <string name="pos8">Eighth score</string>
     //-------------------------------------------
-
     //PERFIL STRINGS
     <string name="desea_cerrar">Do you want to log out?</string>
     <string name="advertencia">¡WARNING!</string>
@@ -103,5 +101,8 @@
     <string name="d10">Description 10</string>
     <string name="d11">Description 11</string>
     <string name="d12">Description 12</string>
-
+    //-------------------------------------------
+    <string name="d_salir_s_guar">Desea salir sin guardar</string>
+    <string name="guardado_correctamente">Saved successfully</string>
+    <string name="error">Error</string>
 </resources>
