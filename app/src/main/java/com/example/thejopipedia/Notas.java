@@ -3,11 +3,11 @@ package com.example.thejopipedia;
 public class Notas {
 
     private String encabezado;
-    private String apunte;
+    private String contenido;
 
-    public Notas(String encabezado, String apunte) {
+    public Notas(String encabezado, String contenido) {
         this.encabezado = encabezado;
-        this.apunte = apunte;
+        this.contenido = contenido;
     }
 
     public Notas() {
@@ -22,11 +22,11 @@ public class Notas {
         this.encabezado = encabezado;
     }
 
-    public String getApunte() {
-        return apunte;
+    public String getContenido() {
+        return contenido;
     }
 
-    public void setApunte(String apunte) {
-        this.apunte = apunte;
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
     }
 }
