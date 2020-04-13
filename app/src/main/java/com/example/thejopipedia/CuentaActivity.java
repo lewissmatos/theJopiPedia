@@ -56,6 +56,8 @@ public class CuentaActivity extends AppCompatActivity implements OnClickListener
         txtNom.setText(user.getNombre());
         txtUser.setText(user.getCorreo());
 
+
+
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount()));
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
