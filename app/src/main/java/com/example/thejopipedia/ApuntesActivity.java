@@ -43,7 +43,10 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnVolver:
-                if (! encabezado.equals("") || !contenido.equals("")){
+                String enc = encabezado.getText().toString();
+                String cont = contenido.getText().toString();
+
+                if (!enc.isEmpty() || !cont.isEmpty()){
                     opdialog = new AlertDialog.Builder(this);
                     opdialog.setMessage("Desea salir sin guardar")
                             .setTitle(R.string.advertencia)
@@ -60,6 +63,10 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
                     });
                     opdialog.create();
                     opdialog.show();
+                }
+                else {
+                    startActivity(new Intent(ApuntesActivity.this, CuentaActivity.class));
+                    finish();
                 }
                 break;
             case R.id.btnListo:
