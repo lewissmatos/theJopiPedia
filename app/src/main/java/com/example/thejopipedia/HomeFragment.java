@@ -1,40 +1,22 @@
 package com.example.thejopipedia;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.SearchView;
-import android.widget.TextView;
-
 import com.example.thejopipedia.RecylclerViewAdapter.RecylclerViewAdapter;
 import com.example.thejopipedia.RecylclerViewAdapter.Tema;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
@@ -78,7 +60,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         temas.add(new Tema(R.drawable.num_128, R.string.mat, R.string.d9, R.color.mat99));
         temas.add(new Tema(R.drawable.sword_128, R.string.his, R.string.d10, R.color.his99));
         temas.add(new Tema(R.drawable.purple_book, R.string.lit, R.string.d11, R.color.lit99));
-        temas.add(new Tema(R.drawable.temple_128, R.string.mit, R.string.d12, R.color.rel99));
+        temas.add(new Tema(R.drawable.temple_128, R.string.mit, R.string.d12, R.color.mit99));
 
         return temas;
     }
