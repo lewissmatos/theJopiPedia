@@ -11,24 +11,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.thejopipedia.RecylclerViewAdapter.Tabla;
 import com.example.thejopipedia.RecylclerViewAdapter.TablaRecylclerViewAdapter;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
 public class PuntuacionFragment extends Fragment {
 
-    private DatabaseReference mDatabase;
-    private FirebaseAuth mAuth;
     private RecyclerView recyclerView3;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.puntuacion_fragment, container, false);
-        mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         recyclerView3 = view.findViewById(R.id.recyclerView3);
         recyclerView3.setLayoutManager(new LinearLayoutManager(getContext()));

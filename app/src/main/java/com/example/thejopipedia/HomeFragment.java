@@ -12,16 +12,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.thejopipedia.RecylclerViewAdapter.RecylclerViewAdapter;
 import com.example.thejopipedia.RecylclerViewAdapter.Tema;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
-    private DatabaseReference mDatabase;
-    private FirebaseAuth mAuth;
     AlertDialog.Builder opdialog;
     private RecyclerView recyclerView;
 
@@ -29,8 +24,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_fragment, container, false);
-        mAuth = FirebaseAuth.getInstance();
-        mDatabase= FirebaseDatabase.getInstance().getReference();
 
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

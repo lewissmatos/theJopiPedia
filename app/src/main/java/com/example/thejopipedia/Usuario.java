@@ -1,13 +1,22 @@
 package com.example.thejopipedia;
 
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
-import com.google.firebase.database.core.Context;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,38 +40,73 @@ public class Usuario {
     public Usuario() {
     }
 
-    public void IniciarSesion(String email, String pass){
+    public static void IniciarSesion(final Context context, final ProgressDialog dialog, String email, String pass){
 
-        String url = "thejopipedia.000webhostapp.com/wsJSONRegistro.php";
+        String url = "https://thejopipedia.000webhostapp.com/wsJSONLogin.php?correo=" + email + "&pass=" + pass;
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+        url = url.replace(" ", "%20");
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
-            public void onResponse(String response) {
+            public void onResponse(JSONObject response) {
+                JSONArray json = response.optJSONArray("usuario");
 
+                try {
+                    for (int i = 0; i < json.length(); i++){
+                        Usuario user = new Usuario();
+                        JSONObject jsonObject = null;
+                        jsonObject = json.getJSONObject(i);
+
+                        user.setIdusuario(jsonObject.getString("id"));
+                        user.setNombre(jsonObject.getString("nombre"));
+                        user.setCorreo(jsonObject.getString("correo"));
+                        user.setContraseña(jsonObject.getString("contraseña"));
+
+                        Preferences.SaveUserData(context, user.getIdUsuario(), user.getNombre(), user.getCorreo(), user.getContraseña());
+                    }
+                    dialog.dismiss();
+                    context.startActivity(new Intent(context, Main2Activity.class));
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    dialog.dismiss();
+                    Toast.makeText(context, R.string.no_estab_conex, Toast.LENGTH_SHORT).show();
+                }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Toast.makeText(context, R.string.no_inic_sesion, Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
 
-            }
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                return super.getParams();
-            }
-        };
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        requestQueue.add(jsonObjectRequest);
     }
 
-    public void Registrar(final String nombre, final String email, final String pass, String rpass){
-        String url = "thejopipedia.000webhostapp.com/wsJSONRegistro.php";
+    public static void Registrar(final Context context, final ProgressDialog dialog, final String nombre, final String email, final String pass){
+
+        String url = "https://thejopipedia.000webhostapp.com//wsJSONRegistro.php";
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                if (response.isEmpty()) {
+                    Toast.makeText(context, R.string.usuario_agr_corr, Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                    context.startActivity(new Intent(context, MainActivity.class));
+                }
+                else{
+                    Toast.makeText(context, response, Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Toast.makeText(context, R.string.no_reg, Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
             }
         }){
             @Override
@@ -74,10 +118,9 @@ public class Usuario {
                 return map;
             }
         };
-    }
 
-    public void LogOut(){
-
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        requestQueue.add(stringRequest);
     }
 
     public String getIdUsuario() {

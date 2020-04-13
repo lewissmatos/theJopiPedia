@@ -17,18 +17,10 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.thejopipedia.RecylclerViewAdapter.ViewPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class PerfilFragment extends Fragment implements View.OnClickListener {
     private TextView txtNom, txtUser;
 
-    private DatabaseReference mDatabase;
-    private FirebaseAuth mAuth;
     private Button btnLogOut;
     AlertDialog.Builder opdialog;
     private TabLayout tabLayout;
@@ -45,9 +37,6 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
         //-----------------------------------
 
 
-        mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-
         txtNom = view.findViewById(R.id.txtNom);
         txtUser = view.findViewById(R.id.txtUser);
         btnLogOut = view.findViewById(R.id.btnLogOut);
@@ -55,22 +44,6 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
         tabLayout = view.findViewById(R.id.tabLayout);
         btnLogOut.setOnClickListener(this);
 
-        String id = mAuth.getCurrentUser().getUid();
-        mDatabase.child("Users").child(id).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String nombre = dataSnapshot.child("Nombre").getValue().toString();
-                txtNom.setText(nombre);
-                String email = dataSnapshot.child("Email").getValue().toString();
-                txtUser.setText(email);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-
-        });
         viewPager.setAdapter(new ViewPagerAdapter(getChildFragmentManager(), tabLayout.getTabCount()));
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -105,7 +78,6 @@ public class PerfilFragment extends Fragment implements View.OnClickListener {
                         .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                mAuth.signOut();
                                 startActivity(new Intent(getContext(), MainActivity.class));
                             }
                         }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {

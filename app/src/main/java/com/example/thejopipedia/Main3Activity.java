@@ -22,13 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -99,34 +93,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
                         Toast.makeText(this, R.string.contr_6_car, Toast.LENGTH_SHORT).show();
                     } else {
 
-                        String url = "https://thejopipedia.000webhostapp.com//wsJSONRegistro.php";
-
-                        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                Toast.makeText(Main3Activity.this, R.string.usuario_agr_corr , Toast.LENGTH_SHORT).show();
-                                dialog.dismiss();
-                                startActivity(new Intent(Main3Activity.this, MainActivity.class));
-                            }
-                        }, new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(Main3Activity.this, R.string.no_reg, Toast.LENGTH_SHORT).show();
-                                dialog.dismiss();
-                            }
-                        }){
-                            @Override
-                            protected Map<String, String> getParams() throws AuthFailureError {
-                                Map<String, String> map = new HashMap<String, String>();
-                                map.put("nombre", nom);
-                                map.put("correo", us);
-                                map.put("contraseña", pass);
-                                return map;
-                            }
-                        };
-
-                        RequestQueue requestQueue = Volley.newRequestQueue(this);
-                        requestQueue.add(stringRequest);
+                        Usuario.Registrar(this, dialog, nom, us, pass);
                     }
                     break;
                 }

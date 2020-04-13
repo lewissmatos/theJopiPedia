@@ -11,17 +11,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.thejopipedia.RecylclerViewAdapter.Perfil;
 import com.example.thejopipedia.RecylclerViewAdapter.PerfilRecylclerViewAdapter;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+
 
 import java.util.ArrayList;
 
 
 public class Perfil_Puntos_Fragment extends Fragment {
 
-    private DatabaseReference mDatabase;
-    private FirebaseAuth mAuth;
 
     private RecyclerView recyclerView2;
 
@@ -29,9 +25,6 @@ public class Perfil_Puntos_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_perfil__puntos_, container, false);
-
-        mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         recyclerView2 = view.findViewById(R.id.recyclerView2);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
