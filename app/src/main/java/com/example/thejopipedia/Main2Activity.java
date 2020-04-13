@@ -35,7 +35,6 @@ public class Main2Activity extends AppCompatActivity {
                     if (menuItem.getItemId() == R.id.perfil)
                     {
                         startActivity(new Intent(Main2Activity.this, CuentaActivity.class));
-                        finish();
                     }
                     else
                     switch (menuItem.getItemId()){
