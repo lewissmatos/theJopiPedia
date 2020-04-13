@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -24,6 +25,7 @@ public class Perfil_Apuntes_Fragment extends Fragment implements View.OnClickLis
     private ImageView añadir_nota;
     private EditText encabezado, contenido;
     private ArrayList<Notas> notas;
+    private TextView txtNuevo;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,8 +39,10 @@ public class Perfil_Apuntes_Fragment extends Fragment implements View.OnClickLis
 
         encabezado = view.findViewById(R.id.encabezado);
         contenido = view.findViewById(R.id.contenido);
+        txtNuevo = view.findViewById(R.id.txtNuevo);
 
         añadir_nota.setOnClickListener(this);
+        txtNuevo.setOnClickListener(this);
 
         notas = new ArrayList<>();
 
@@ -49,6 +53,7 @@ public class Perfil_Apuntes_Fragment extends Fragment implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.añadir_nota:
+            case R.id.txtNuevo:
                 startActivity(new Intent(getContext(), ApuntesActivity.class));
                 break;
         }

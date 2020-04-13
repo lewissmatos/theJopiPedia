@@ -100,7 +100,7 @@
                 android:layout_marginTop="2dp"
                 android:hint="Contenido"
                 android:background="@drawable/xml_vacio"
-                android:maxLength="400"
+                android:maxLength="500"
                 android:inputType="textMultiLine"
                 android:padding="8dp"
                 android:textSize="16sp"
