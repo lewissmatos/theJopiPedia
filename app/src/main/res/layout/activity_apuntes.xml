@@ -74,10 +74,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Titulo"
+                android:fontFamily="sans-serif-smallcaps"
                 android:background="@drawable/xml_vacio"
                 android:gravity="center"
                 android:padding="8dp"
                 android:textStyle="bold"
+                android:textColor="@color/nocturne"
                 android:maxLength="30"
                 android:textSize="30sp" />
             <EditText
