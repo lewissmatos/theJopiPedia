@@ -53,7 +53,7 @@ public class Perfil_Puntos_Fragment extends Fragment {
         perfil.add(new Perfil(R.drawable.num_128, R.string.mat, "0000", R.color.matclaro));
         perfil.add(new Perfil(R.drawable.sword_128, R.string.his, "0000", R.color.hisclaro));
         perfil.add(new Perfil(R.drawable.purple_book, R.string.lit,"0000", R.color.litclaro));
-        perfil.add(new Perfil(R.drawable.temple_128, R.string.mit, "0000", R.color.relclaro));
+        perfil.add(new Perfil(R.drawable.temple_128, R.string.mit, "0000", R.color.mitclaro));
 
         return perfil;
 

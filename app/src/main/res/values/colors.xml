@@ -30,20 +30,20 @@
     <color name="mat">#EF1515</color>
     <color name="his">#DFE651</color>
     <color name="lit">#5734A5</color>
-    <color name="rel">#454545</color>
+    <color name="mit">#454545</color>
     //99COLORS (TRANS)
     <color name="bio99">#99FBA53A</color>
     <color name="univ99">#995F9E98</color>
     <color name="zoo99">#99D8AA65</color>
     <color name="filo99">#99637785</color>
     <color name="fis99">#CC000000</color>
-    <color name="geo99">#9969EDA1</color>
-    <color name="comp99">#996B837E</color>
+    <color name="geo99">#CC27C56A</color>
+    <color name="comp99">#99729C98</color>
     <color name="quim99">#990490D1</color>
     <color name="mat99">#99EF1515</color>
-    <color name="his99">#99DFE651</color>
+    <color name="his99">#CCCCD51A</color>
     <color name="lit99">#995734A5</color>
-    <color name="rel99">#99454545</color>
+    <color name="mit99">#99454545</color>
     //COLORES CLAROS PA EL PERFIL
     <color name="bioclaro">#4DFBA53A</color>
     <color name="univclaro">#4D5F9E98</color>
@@ -56,7 +56,7 @@
     <color name="matclaro">#4DEF1515</color>
     <color name="hisclaro">#4DDFE651</color>
     <color name="litclaro">#4D5734A5</color>
-    <color name="relclaro">#4D454545</color>
+    <color name="mitclaro">#4D454545</color>
     <color name="transparente_puro">#00FFFFFF</color>
 
     <color name="gold">#FFBB5A</color>

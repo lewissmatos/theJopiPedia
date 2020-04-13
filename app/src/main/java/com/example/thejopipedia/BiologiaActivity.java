@@ -119,7 +119,7 @@ public class BiologiaActivity extends AppCompatActivity implements View.OnClickL
                 img.setImageResource(R.drawable.globe_128);
                 btnPlay.setBackgroundResource(R.drawable.curvas_marron);
                 //---------------------------------------------------------
-                String barraGeo = "#9969EDA1";
+                String barraGeo = "#CC27C56A";
                 this.window = getWindow();
                 //barcolor
                 window.setStatusBarColor(Color.parseColor(barraGeo));
@@ -130,7 +130,7 @@ public class BiologiaActivity extends AppCompatActivity implements View.OnClickL
                 img.setImageResource(R.drawable.computer_128);
                 btnPlay.setBackgroundResource(R.drawable.btnplaycomp);
                 //---------------------------------------------------------
-                String barraComp = "#996B837E";
+                String barraComp = "#99729C98";
                 this.window = getWindow();
                 //barcolor
                 window.setStatusBarColor(Color.parseColor(barraComp));
@@ -163,7 +163,7 @@ public class BiologiaActivity extends AppCompatActivity implements View.OnClickL
                 img.setImageResource(R.drawable.sword_128);
                 btnPlay.setBackgroundResource(R.drawable.curvas_amarillas);
                 //---------------------------------------------------------
-                String barraHis = "#99DFE651";
+                String barraHis = "#CCCCD51A";
                 this.window = getWindow();
                 //barcolor
                 window.setStatusBarColor(Color.parseColor(barraHis));
@@ -180,7 +180,7 @@ public class BiologiaActivity extends AppCompatActivity implements View.OnClickL
                 window.setStatusBarColor(Color.parseColor(barraLit));
                 break;
             case 11:
-                lyPrin.setBackgroundTintList(getResources().getColorStateList(R.color.rel99));
+                lyPrin.setBackgroundTintList(getResources().getColorStateList(R.color.mit99));
                 txtTitulo.setText(R.string.mit);
                 img.setImageResource(R.drawable.temple_128);
                 btnPlay.setBackgroundResource(R.drawable.btnplayrel);

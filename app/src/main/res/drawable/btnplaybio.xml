@@ -8,5 +8,5 @@
 
 
 
-    <solid android:color="#99FBA53A"/>
+    <solid android:color="@color/bio99"/>
 </shape>
