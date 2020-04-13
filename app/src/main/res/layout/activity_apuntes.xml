@@ -21,12 +21,20 @@
             android:orientation="vertical"
             app:layout_constraintTop_toTopOf="parent">
 
+            <ImageView
+                android:id="@+id/btnVolver"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                app:srcCompat="@drawable/arrow_back" />
+
             <LinearLayout
-                android:paddingLeft="26dp"
+                android:paddingLeft="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:gravity="left">
+                android:gravity="center">
 
 
                 <TextView
@@ -36,7 +44,7 @@
                     android:text="@string/apuntes"
                     android:textStyle="bold"
                     android:textColor="@color/light_texts_color"
-                    android:textSize="38sp" />
+                    android:textSize="36sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -50,10 +58,10 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/listo"
+                android:id="@+id/btnListo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_alignParentRight="true"
                 app:srcCompat="@drawable/done">
@@ -73,14 +81,14 @@
                 android:id="@+id/encabezado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Titulo"
+                android:hint="Encabezado"
                 android:fontFamily="sans-serif-smallcaps"
                 android:background="@drawable/xml_vacio"
                 android:gravity="center"
                 android:padding="8dp"
                 android:textStyle="bold"
                 android:textColor="@color/nocturne"
-                android:maxLength="30"
+                android:maxLength="22"
                 android:textSize="30sp" />
             <EditText
                 android:id="@+id/contenido"

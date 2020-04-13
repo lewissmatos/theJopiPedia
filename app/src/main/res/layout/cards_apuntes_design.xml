@@ -41,7 +41,7 @@
                     android:text="Encabezado"
                     android:textStyle="bold"
                     android:textColor="@color/nocturne"
-                    android:textSize="20sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/contenido"
@@ -49,10 +49,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="contenido"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="8dp"
                     android:textColor="@color/dark_texts_color"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textSize="16sp"
+                    />
 
             </LinearLayout>
 
