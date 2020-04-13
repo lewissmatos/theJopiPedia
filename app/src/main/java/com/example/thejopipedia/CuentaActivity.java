@@ -29,6 +29,7 @@ public class CuentaActivity extends AppCompatActivity implements OnClickListener
     private Window window;
     private ViewPagerAdapter adapter;
     ImageView btnVolver;
+    private Usuario user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class CuentaActivity extends AppCompatActivity implements OnClickListener
         //barcolor
         window.setStatusBarColor(Color.parseColor(colorbarra));
 
-
+        user = Preferences.getUserData(this);
 
         txtNom = findViewById(R.id.txtNom);
         txtUser = findViewById(R.id.txtUser);
@@ -52,6 +53,8 @@ public class CuentaActivity extends AppCompatActivity implements OnClickListener
         btnLogOut.setOnClickListener(this);
         btnVolver.setOnClickListener(this);
 
+        txtNom.setText(user.getNombre());
+        txtUser.setText(user.getCorreo());
 
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount()));
 

@@ -21,4 +21,17 @@ public class Preferences {
 
         editor.commit();
     }
+
+    public static Usuario getUserData(Context context){
+        Usuario user = new Usuario();
+
+        SharedPreferences preferences = context.getSharedPreferences("datos", Context.MODE_PRIVATE);
+
+        user.setIdusuario(preferences.getString("id", ""));
+        user.setNombre(preferences.getString("nombre", ""));
+        user.setCorreo(preferences.getString("correo", ""));
+        user.setContraseña(preferences.getString("contraseña", ""));
+
+        return user;
+    }
 }
