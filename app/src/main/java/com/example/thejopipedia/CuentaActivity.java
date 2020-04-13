@@ -92,7 +92,7 @@ public class CuentaActivity extends AppCompatActivity implements OnClickListener
                         .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-
+                                Preferences.SaveUserData(CuentaActivity.this, " ", " ", " ", " ");
                                 startActivity(new Intent(CuentaActivity.this, MainActivity.class));
                                 finish();
                             }

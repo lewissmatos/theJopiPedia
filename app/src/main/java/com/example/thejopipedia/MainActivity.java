@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ProgressDialog dialog;
     private ImageView imgClass, imgInfo;
     AlertDialog.Builder opdialog;
+    private Usuario user;
+
     @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         dialog = new ProgressDialog(this);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        //VERIFICAR SI HAY ALGUN USUARIO CON LA INICION SESIADA
+        user = Preferences.getUserData(this);
+        if (!user.getNombre().equalsIgnoreCase(" ")){
+            startActivity(new Intent(MainActivity.this, Main2Activity.class));
+            finish();
+        }
 
         //FIND VIEW ID
         edUser = findViewById(R.id.edUser);
