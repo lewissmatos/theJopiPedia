@@ -53,6 +53,8 @@ public class CuentaActivity extends AppCompatActivity implements OnClickListener
         btnVolver.setOnClickListener(this);
 
 
+
+
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount()));
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
