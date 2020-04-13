@@ -108,7 +108,7 @@ public class BiologiaActivity extends AppCompatActivity implements View.OnClickL
                 img.setImageResource(R.drawable.atom_128);
                 btnPlay.setBackgroundResource(R.drawable.btnplayfis);
                 //---------------------------------------------------------
-                String barraFis = "#99F3859B";
+                String barraFis = "#CC000000";
                 this.window = getWindow();
                 //barcolor
                 window.setStatusBarColor(Color.parseColor(barraFis));

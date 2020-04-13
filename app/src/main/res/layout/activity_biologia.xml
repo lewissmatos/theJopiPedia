@@ -81,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/toque_boton_iniciar"
-            android:textColor="@color/dark_texts_color"
+            android:textColor="#996A6A6A"
             android:layout_marginTop="4dp"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"

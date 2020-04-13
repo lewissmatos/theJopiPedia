@@ -13,7 +13,7 @@
     //--------------------------------------------
     <color name="principal_color">#F1F1F1</color>
     <color name="dark_texts_color">#515151</color>
-    <color name="nocturne">#484F51</color>
+    <color name="nocturne">#383E40</color>
     <color name="light_texts_color">#FFFFFF</color>
     <color name="gray_texts_color">#D1D1D1</color>
     //--------------------------------------------
@@ -23,7 +23,7 @@
     <color name="univ">#5F9E98</color>
     <color name="zoo">#D8AA65</color>
     <color name="filo">#637785</color>
-    <color name="fis">#F3859B</color>
+    <color name="fis">#000</color>
     <color name="geo">#69EDA1</color>
     <color name="comp">#6B837E</color>
     <color name="quim">#0490D1</color>
@@ -36,7 +36,7 @@
     <color name="univ99">#995F9E98</color>
     <color name="zoo99">#99D8AA65</color>
     <color name="filo99">#99637785</color>
-    <color name="fis99">#99F3859B</color>
+    <color name="fis99">#CC000000</color>
     <color name="geo99">#9969EDA1</color>
     <color name="comp99">#996B837E</color>
     <color name="quim99">#990490D1</color>
@@ -49,7 +49,7 @@
     <color name="univclaro">#4D5F9E98</color>
     <color name="zooclaro">#4DD8AA65</color>
     <color name="filoclaro">#4D637785</color>
-    <color name="fisclaro">#4DF3859B</color>
+    <color name="fisclaro">#4D000000</color>
     <color name="geoclaro">#4D69EDA1</color>
     <color name="compclaro">#4D6B837E</color>
     <color name="quimclaro">#4D0490D1</color>

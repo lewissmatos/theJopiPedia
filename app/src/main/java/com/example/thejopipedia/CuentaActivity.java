@@ -36,7 +36,7 @@ public class CuentaActivity extends AppCompatActivity implements OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cuenta);
 
-        String colorbarra = "#484F51";
+        String colorbarra = "#383E40";
 
         this.window = getWindow();
         //barcolor
