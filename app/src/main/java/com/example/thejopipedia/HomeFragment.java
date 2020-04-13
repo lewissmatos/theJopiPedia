@@ -77,7 +77,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         temas.add(new Tema(R.drawable.test_128, R.string.quim, R.string.d8, R.color.quim99));
         temas.add(new Tema(R.drawable.num_128, R.string.mat, R.string.d9, R.color.mat99));
         temas.add(new Tema(R.drawable.sword_128, R.string.his, R.string.d10, R.color.his99));
-        temas.add(new Tema(R.drawable.green_book_128, R.string.lit, R.string.d11, R.color.lit99));
+        temas.add(new Tema(R.drawable.purple_book, R.string.lit, R.string.d11, R.color.lit99));
         temas.add(new Tema(R.drawable.temple_128, R.string.mit, R.string.d12, R.color.rel99));
 
         return temas;

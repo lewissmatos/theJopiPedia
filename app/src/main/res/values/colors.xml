@@ -27,9 +27,9 @@
     <color name="geo">#69EDA1</color>
     <color name="comp">#6B837E</color>
     <color name="quim">#0490D1</color>
-    <color name="mat">#5734A5</color>
+    <color name="mat">#EF1515</color>
     <color name="his">#DFE651</color>
-    <color name="lit">#89EACE</color>
+    <color name="lit">#5734A5</color>
     <color name="rel">#454545</color>
     //99COLORS (TRANS)
     <color name="bio99">#99FBA53A</color>
@@ -40,23 +40,23 @@
     <color name="geo99">#9969EDA1</color>
     <color name="comp99">#996B837E</color>
     <color name="quim99">#990490D1</color>
-    <color name="mat99">#995734A5</color>
+    <color name="mat99">#99EF1515</color>
     <color name="his99">#99DFE651</color>
-    <color name="lit99">#9989EACE</color>
+    <color name="lit99">#995734A5</color>
     <color name="rel99">#99454545</color>
     //COLORES CLAROS PA EL PERFIL
-    <color name="bioclaro">#4D6A3C03</color>
-    <color name="univclaro">#4D023E39</color>
-    <color name="zooclaro">#4D492C02</color>
-    <color name="filoclaro">#4D033050</color>
-    <color name="fisclaro">#4D470210</color>
-    <color name="geoclaro">#4D065C2B</color>
-    <color name="compclaro">#4D01372C</color>
-    <color name="quimclaro">#4D013249</color>
-    <color name="matclaro">#4D130239</color>
-    <color name="hisclaro">#4D3D4002</color>
-    <color name="litclaro">#4D013727</color>
-    <color name="relclaro">#4D292929</color>
+    <color name="bioclaro">#4DFBA53A</color>
+    <color name="univclaro">#4D5F9E98</color>
+    <color name="zooclaro">#4DD8AA65</color>
+    <color name="filoclaro">#4D637785</color>
+    <color name="fisclaro">#4DF3859B</color>
+    <color name="geoclaro">#4D69EDA1</color>
+    <color name="compclaro">#4D6B837E</color>
+    <color name="quimclaro">#4D0490D1</color>
+    <color name="matclaro">#4DEF1515</color>
+    <color name="hisclaro">#4DDFE651</color>
+    <color name="litclaro">#4D5734A5</color>
+    <color name="relclaro">#4D454545</color>
     <color name="transparente_puro">#00FFFFFF</color>
 
     <color name="gold">#FFBB5A</color>

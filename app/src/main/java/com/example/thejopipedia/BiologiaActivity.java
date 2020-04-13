@@ -147,12 +147,12 @@ public class BiologiaActivity extends AppCompatActivity implements View.OnClickL
                 window.setStatusBarColor(Color.parseColor(barraQuim));
                 break;
             case 8:
-                txtTitulo.setTextColor(getResources().getColor(R.color.mat99));
+                lyPrin.setBackgroundTintList(getResources().getColorStateList(R.color.quim99));
                 txtTitulo.setText(R.string.mat);
                 img.setImageResource(R.drawable.num_128);
                 btnPlay.setBackgroundResource(R.drawable.btnplaymat);
                 //---------------------------------------------------------
-                String barraMat = "#995734A5";
+                String barraMat = "#99EF1515";
                 this.window = getWindow();
                 //barcolor
                 window.setStatusBarColor(Color.parseColor(barraMat));
@@ -171,10 +171,10 @@ public class BiologiaActivity extends AppCompatActivity implements View.OnClickL
             case 10:
                 lyPrin.setBackgroundTintList(getResources().getColorStateList(R.color.lit99));
                 txtTitulo.setText(R.string.lit);
-                img.setImageResource(R.drawable.green_book_128);
+                img.setImageResource(R.drawable.purple_book);
                 btnPlay.setBackgroundResource(R.drawable.btnplaylit);
                 //---------------------------------------------------------
-                String barraLit = "#9989EACE";
+                String barraLit = "#995734A5";
                 this.window = getWindow();
                 //barcolor
                 window.setStatusBarColor(Color.parseColor(barraLit));
