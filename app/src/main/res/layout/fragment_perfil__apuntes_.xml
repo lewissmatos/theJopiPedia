@@ -79,6 +79,13 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/curvestxt">
 
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
                 </LinearLayout>
 
             </ScrollView>
