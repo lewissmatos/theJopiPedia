@@ -13,11 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ApuntesActivity"></activity>
+        <activity android:name=".EditarApuntesActivity"></activity>
+        <activity android:name=".ApuntesActivity" />
         <activity
             android:name=".CuentaActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"></activity>
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"

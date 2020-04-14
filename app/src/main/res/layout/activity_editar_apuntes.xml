@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ApuntesActivity">
+    tools:context=".EditarApuntesActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,10 +53,20 @@
                     android:layout_marginTop="6dp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-smallcaps"
-                    android:text="Crea un nuevo apunte"
+                    android:text="Editar"
                     android:textColor="@color/gray_texts_color"
                     android:textSize="16sp" />
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btnEliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="46dp"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/delete_trash">
+            </ImageView>
 
             <ImageView
                 android:id="@+id/btnListo"
@@ -65,7 +76,6 @@
                 android:layout_marginEnd="10dp"
                 android:layout_alignParentRight="true"
                 app:srcCompat="@drawable/done">
-
             </ImageView>
 
         </RelativeLayout>
@@ -108,5 +118,6 @@
 
         </LinearLayout>
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

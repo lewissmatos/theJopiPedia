@@ -25,11 +25,11 @@ import com.android.volley.toolbox.Volley;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ApuntesActivity extends AppCompatActivity implements View.OnClickListener {
+public class EditarApuntesActivity extends AppCompatActivity implements View.OnClickListener{
 
+    ImageView btnEliminar, btnVolver, btnListo;
     AlertDialog.Builder opdialog;
     private Window window;
-    ImageView btnVolver, btnListo;
     EditText encabezado, contenido;
     private Usuario user;
     private ProgressDialog dialog;
@@ -37,7 +37,9 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_apuntes);
+        setContentView(R.layout.activity_editar_apuntes);
+
+
         dialog = new ProgressDialog(this);
 
         String colorbarra = "#383E40";
@@ -50,9 +52,11 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
 
         encabezado = findViewById(R.id.encabezado);
         contenido= findViewById(R.id.contenido);
+
         btnVolver= findViewById(R.id.btnVolver);
         btnListo= findViewById(R.id.btnListo);
-
+        btnEliminar = findViewById(R.id.btnEliminar);
+        btnEliminar.setOnClickListener(this);
         btnVolver.setOnClickListener(this);
         btnListo.setOnClickListener(this);
 
@@ -73,7 +77,7 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
                             .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    startActivity(new Intent(ApuntesActivity.this, CuentaActivity.class));
+                                    startActivity(new Intent(EditarApuntesActivity.this, CuentaActivity.class));
                                     finish();
                                 }
                             }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
@@ -85,7 +89,7 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
                     opdialog.show();
                 }
                 else {
-                    startActivity(new Intent(ApuntesActivity.this, CuentaActivity.class));
+                    startActivity(new Intent(EditarApuntesActivity.this, CuentaActivity.class));
                     finish();
                 }
                 break;
@@ -109,15 +113,15 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
                         @Override
                         public void onResponse(String response) {
                             dialog.dismiss();
-                            Toast.makeText(ApuntesActivity.this, "El apunte se ha guardado correctamente", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(ApuntesActivity.this, CuentaActivity.class));
+                            Toast.makeText(EditarApuntesActivity.this, "El apunte se ha guardado correctamente", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(EditarApuntesActivity.this, CuentaActivity.class));
                             finish();
                         }
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             dialog.dismiss();
-                            Toast.makeText(ApuntesActivity.this, "Ha ocurrido un error al guardar el apunte", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(EditarApuntesActivity.this, "Ha ocurrido un error al guardar el apunte", Toast.LENGTH_SHORT).show();
                         }
                     }){
                         @Override
@@ -134,6 +138,8 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
                     requestQueue.add(stringRequest);
                 }
                 break;
+            case R.id.btnEliminar:
+                //EIRON HAZ TU MAGIA
         }
     }
 }

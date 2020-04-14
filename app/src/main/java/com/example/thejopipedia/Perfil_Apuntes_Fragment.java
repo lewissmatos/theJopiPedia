@@ -81,7 +81,7 @@ public class Perfil_Apuntes_Fragment extends Fragment implements View.OnClickLis
     }
 
     private void getNotas(){
-        dialog.setMessage("Cargando notas");
+        dialog.setMessage("Cargando");
         dialog.setCanceledOnTouchOutside(false);
         dialog.show();
 
