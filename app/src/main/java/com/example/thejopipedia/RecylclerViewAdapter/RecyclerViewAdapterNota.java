@@ -38,7 +38,7 @@ public class RecyclerViewAdapterNota  extends RecyclerView.Adapter<RecyclerViewA
     public void onBindViewHolder(@NonNull RecyclerViewAdapterNota.ViewHolder holder, int position) {
         holder.encabezado.setText(notas.get(position).getEncabezado());
         holder.contenido.setText(notas.get(position).getContenido());
-        holder.id.setText(notas.get(position).getContenido());
+        holder.id.setText(notas.get(position).getId());
     }
 
     @Override
@@ -58,7 +58,7 @@ public class RecyclerViewAdapterNota  extends RecyclerView.Adapter<RecyclerViewA
                 public void onClick(View v) {
                     Intent i = new Intent(context, EditarApuntesActivity.class);
                     Bundle b = new Bundle();
-                    b.putInt("id", getAdapterPosition());
+                    b.putString("id", id.getText().toString());
                     i.putExtras(b);
                     context.startActivity(i);
                 }

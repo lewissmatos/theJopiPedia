@@ -19,8 +19,14 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.thejopipedia.RecylclerViewAdapter.RecyclerViewAdapterNota;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,7 +36,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
     ImageView btnEliminar, btnVolver, btnListo;
     AlertDialog.Builder opdialog;
     private Window window;
-    private int idApunte;
+    private String idApunte;
     EditText encabezado, contenido;
     private Usuario user;
     private ProgressDialog dialog;
@@ -42,7 +48,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
 
         try {
             Bundle b = getIntent().getExtras();
-            idApunte = b.getInt("idApunte");
+            idApunte = b.getString("id");
         } catch (Exception e){}
 
         dialog = new ProgressDialog(this);
@@ -64,8 +70,8 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
         btnEliminar.setOnClickListener(this);
         btnVolver.setOnClickListener(this);
         btnListo.setOnClickListener(this);
-        getBundle(idApunte);
 
+        getApunte();
     }
 
     @Override
@@ -112,36 +118,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
                     Toast.makeText(this, "No puedes dejar campos vacíos", Toast.LENGTH_SHORT).show();
                 }
                 else{
-
-                    String url = "https://thejopipedia.000webhostapp.com/wsJSONGuardarNota.php";
-
-                    StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            dialog.dismiss();
-                            Toast.makeText(EditarApuntesActivity.this, "El apunte se ha guardado correctamente", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(EditarApuntesActivity.this, CuentaActivity.class));
-                            finish();
-                        }
-                    }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            dialog.dismiss();
-                            Toast.makeText(EditarApuntesActivity.this, "Ha ocurrido un error al guardar el apunte", Toast.LENGTH_SHORT).show();
-                        }
-                    }){
-                        @Override
-                        protected Map<String, String> getParams() throws AuthFailureError {
-                            HashMap<String, String> map = new HashMap<String, String>();
-                            map.put("encabezado", enc1);
-                            map.put("contenido", cont1);
-                            map.put("id", user.getIdUsuario());
-                            return map;
-                        }
-                    };
-
-                    RequestQueue requestQueue = Volley.newRequestQueue(this);
-                    requestQueue.add(stringRequest);
+                    editApunte(enc1, cont1);
                 }
                 break;
             case R.id.btnEliminar:
@@ -152,8 +129,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
                         .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                startActivity(new Intent(EditarApuntesActivity.this, CuentaActivity.class));
-                                finish();
+                                deleteApunte();
                             }
                         }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
                     @Override
@@ -162,20 +138,119 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
                 });
                 opdialog.create();
                 opdialog.show();
-
-                //EIRON HAZ TU MAGIA
         }
 
     }
-    private void getBundle(int id){
-        switch (id) {
 
-            case 0:
+    private void getApunte(){
+        dialog.setMessage("cargando apuntes...");
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.show();
 
-                break;
-            case 1:
+        String url = "https://thejopipedia.000webhostapp.com/wsJSONGetNotaById.php?id=" + idApunte;
 
-                break;
-        }
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                JSONArray json = response.optJSONArray("nota");
+
+                try {
+                    for (int i = 0; i < json.length(); i++){
+                        JSONObject jsonObject = null;
+                        jsonObject = json.getJSONObject(i);
+
+                        encabezado.setText(jsonObject.getString("encabezado"));
+                        contenido.setText(jsonObject.getString("contenido"));
+
+                    }
+                    dialog.dismiss();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    dialog.dismiss();
+                    Toast.makeText(EditarApuntesActivity.this, "ERROR", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(EditarApuntesActivity.this, "Error al cargar los apuntes", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(jsonObjectRequest);
+    }
+
+    private void deleteApunte(){
+        dialog.setMessage("eliminado apunte");
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.show();
+
+        String url = "https://thejopipedia.000webhostapp.com/wsJSONDeteleNota.php";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                dialog.dismiss();
+                Toast.makeText(EditarApuntesActivity.this, "El apunte ha sido eliminado", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(EditarApuntesActivity.this, CuentaActivity.class));
+                finish();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                dialog.dismiss();
+                Toast.makeText(EditarApuntesActivity.this, "Ha ocurrido un error al eliminar el apunte", Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String, String> map = new HashMap<String, String>();
+                map.put("id", idApunte);
+
+                return map;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+
+    private void editApunte(final String encabezado, final String contenido){
+        dialog.setMessage("editando apunte");
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.show();
+
+        String url = "https://thejopipedia.000webhostapp.com/wsJSONEditNota.php";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                dialog.dismiss();
+                Toast.makeText(EditarApuntesActivity.this, "El apunte se ha editado correctamente", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(EditarApuntesActivity.this, CuentaActivity.class));
+                finish();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                dialog.dismiss();
+                Toast.makeText(EditarApuntesActivity.this, "Ha ocurrido un error al editar el apunte", Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String, String> map = new HashMap<String, String>();
+                map.put("encabezado", encabezado);
+                map.put("contenido", contenido);
+                map.put("id", idApunte);
+                return map;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
 }

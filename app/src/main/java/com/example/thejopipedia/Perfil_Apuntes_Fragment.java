@@ -98,6 +98,7 @@ public class Perfil_Apuntes_Fragment extends Fragment implements View.OnClickLis
                         JSONObject jsonObject = null;
                         jsonObject = json.getJSONObject(i);
 
+                        nota.setId(jsonObject.getString("id"));
                         nota.setEncabezado(jsonObject.getString("encabezado"));
                         nota.setContenido(jsonObject.getString("contenido"));
 
