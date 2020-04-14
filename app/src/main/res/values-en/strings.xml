@@ -26,6 +26,7 @@
     <string name="his">History</string>
     <string name="lit">Literature</string>
     <string name="mit">Mythology</string>
+    <string name="anime">ANIME</string>
     //LOGIN Y REGISTRO
     <string name="serv_en_des">developing service</string>
     <string name="email">Email</string>

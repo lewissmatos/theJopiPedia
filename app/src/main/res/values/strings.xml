@@ -24,6 +24,7 @@
     <string name="his">Historia</string>
     <string name="lit">Literatura</string>
     <string name="mit">Mitología</string>
+    <string name="anime">ANIME</string>
     //LOGIN Y REGISTRO
     <string name="serv_en_des">servicio en desarrollo</string>
     <string name="email">Email</string>
