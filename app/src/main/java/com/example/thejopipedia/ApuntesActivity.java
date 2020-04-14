@@ -1,7 +1,7 @@
 package com.example.thejopipedia;
 
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
+import android.app.DownloadManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -32,14 +32,12 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
     ImageView btnVolver, btnListo;
     EditText encabezado, contenido;
     private Usuario user;
-    private ProgressDialog dialog;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apuntes);
-        dialog = new ProgressDialog(this);
+
         String colorbarra = "#383E40";
 
         user = Preferences.getUserData(this);
@@ -67,7 +65,7 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
 
                 if (!enc.isEmpty() || !cont.isEmpty()){
                     opdialog = new AlertDialog.Builder(this);
-                    opdialog.setMessage(R.string.d_salir_s_guar)
+                    opdialog.setMessage("Desea salir sin guardar")
                             .setTitle(R.string.advertencia)
                             .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
                                 @Override
@@ -89,15 +87,12 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
                 }
                 break;
             case R.id.btnListo:
-                dialog.setMessage("Guardando");
-                dialog.setCanceledOnTouchOutside(false);
-                dialog.show();
+
                 final String enc1 = encabezado.getText().toString();
                 final String cont1 = contenido.getText().toString();
 
                 if (enc1.isEmpty() || cont1.isEmpty()){
-                    Toast.makeText(this, R.string.llenar_campos, Toast.LENGTH_SHORT).show();
-                    dialog.dismiss();
+                    Toast.makeText(this, "No puedes dejar campos vacíos", Toast.LENGTH_SHORT).show();
                 }
                 else{
 
@@ -106,16 +101,14 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
                     StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-                            Toast.makeText(ApuntesActivity.this, R.string.guardado_correctamente, Toast.LENGTH_SHORT).show();
-                            dialog.dismiss();
+                            Toast.makeText(ApuntesActivity.this, "El apunte se ha guardado correctamente", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(ApuntesActivity.this, CuentaActivity.class));
                             finish();
                         }
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(ApuntesActivity.this, R.string.error, Toast.LENGTH_SHORT).show();
-                            dialog.dismiss();
+                            Toast.makeText(ApuntesActivity.this, "Ha ocurrido un error al guardar el apunte", Toast.LENGTH_SHORT).show();
                         }
                     }){
                         @Override
