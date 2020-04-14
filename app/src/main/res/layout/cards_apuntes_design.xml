@@ -64,7 +64,20 @@
                     />
 
             </LinearLayout>
-
+            <TextView
+                android:id="@+id/txtVer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver"
+                android:textStyle="bold"
+                android:drawableRight="@drawable/ver_rigth"
+                android:drawablePadding="-4dp"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="40dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/nocturne"
+                android:textSize="16sp"
+                />
             <TextView
                 android:id="@+id/idNote"
                 android:layout_width="1dp"
