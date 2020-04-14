@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
+        android:padding="6dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -22,7 +23,7 @@
                 android:layout_height="match_parent"
                 android:gravity="left"
                 android:orientation="vertical"
-                android:paddingLeft="26dp">
+                android:paddingLeft="22dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -46,7 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="8dp"
                     android:src="@drawable/note_add" />
 
                 <TextView
@@ -55,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/nuevo"
                     android:layout_marginTop="-4dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="8dp"
                     android:textSize="12dp"
                     android:textColor="@color/nocturne"
                     >
@@ -69,7 +70,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:padding="10dp">
+            android:padding="4dp"
+            android:background="@drawable/curvestxt"
+            >
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -78,8 +81,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="6dp"
-                    android:background="@drawable/curvestxt">
+                    android:orientation="vertical"
+                    >
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerView"
