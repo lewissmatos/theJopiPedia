@@ -30,6 +30,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
     ImageView btnEliminar, btnVolver, btnListo;
     AlertDialog.Builder opdialog;
     private Window window;
+    private int idApunte;
     EditText encabezado, contenido;
     private Usuario user;
     private ProgressDialog dialog;
@@ -39,6 +40,10 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_apuntes);
 
+        try {
+            Bundle b = getIntent().getExtras();
+            idApunte = b.getInt("idApunte");
+        } catch (Exception e){}
 
         dialog = new ProgressDialog(this);
 
@@ -59,6 +64,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
         btnEliminar.setOnClickListener(this);
         btnVolver.setOnClickListener(this);
         btnListo.setOnClickListener(this);
+        getBundle(idApunte);
 
     }
 
@@ -158,6 +164,18 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
                 opdialog.show();
 
                 //EIRON HAZ TU MAGIA
+        }
+
+    }
+    private void getBundle(int id){
+        switch (id) {
+
+            case 0:
+
+                break;
+            case 1:
+
+                break;
         }
     }
 }

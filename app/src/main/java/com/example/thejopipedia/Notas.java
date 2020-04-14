@@ -4,14 +4,25 @@ public class Notas {
 
     private String encabezado;
     private String contenido;
+    private String id;
 
-    public Notas(String encabezado, String contenido) {
+
+    public Notas(String encabezado, String contenido, String id) {
         this.encabezado = encabezado;
         this.contenido = contenido;
+        this.id= id;
     }
 
     public Notas() {
 
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getEncabezado() {

@@ -1,6 +1,8 @@
 package com.example.thejopipedia.RecylclerViewAdapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.thejopipedia.EditarApuntesActivity;
 import com.example.thejopipedia.Notas;
 import com.example.thejopipedia.R;
 
@@ -35,6 +38,7 @@ public class RecyclerViewAdapterNota  extends RecyclerView.Adapter<RecyclerViewA
     public void onBindViewHolder(@NonNull RecyclerViewAdapterNota.ViewHolder holder, int position) {
         holder.encabezado.setText(notas.get(position).getEncabezado());
         holder.contenido.setText(notas.get(position).getContenido());
+        holder.id.setText(notas.get(position).getContenido());
     }
 
     @Override
@@ -44,13 +48,25 @@ public class RecyclerViewAdapterNota  extends RecyclerView.Adapter<RecyclerViewA
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView encabezado, contenido;
+        TextView encabezado, contenido, id;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(context, EditarApuntesActivity.class);
+                    Bundle b = new Bundle();
+                    b.putInt("id", getAdapterPosition());
+                    i.putExtras(b);
+                    context.startActivity(i);
+                }
+            });
+
             encabezado = itemView.findViewById(R.id.encabezado);
             contenido = itemView.findViewById(R.id.contenido);
+            id = itemView.findViewById(R.id.id);
         }
     }
 }
