@@ -13,10 +13,10 @@
     //--------------------------------------------
     <color name="principal_color">#F1F1F1</color>
     <color name="dark_texts_color">#515151</color>
-    <color name="nocturne">#383E40</color>
-    <color name="nocturneclaro">#51595C</color>
+    <color name="nocturne">#2B2B33</color>
+    <color name="nocturneclaro">#4B4B55</color>
     <color name="light_texts_color">#FFFFFF</color>
-    <color name="gray_texts_color">#D1D1D1</color>
+    <color name="gray_texts_color">#9E9E9E</color>
     //--------------------------------------------
 
     //COLORES DE TEMAS

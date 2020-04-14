@@ -40,7 +40,7 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_apuntes);
         dialog = new ProgressDialog(this);
 
-        String colorbarra = "#383E40";
+        String colorbarra = "#2B2B33";
 
         user = Preferences.getUserData(this);
 

@@ -35,7 +35,7 @@ public class Perfil_Puntos_Fragment extends Fragment {
     private ArrayList<Perfil> getPerfilList(){
         ArrayList<Perfil> perfil = new ArrayList<>();
 
-        perfil.add(new Perfil(R.drawable.bio_dna_128, R.string.bio, "0000", R.color.nocturneclaro));
+        perfil.add(new Perfil(R.drawable.bio_dna_128, R.string.bio, "0000", R.color.gray_texts_color));
         perfil.add(new Perfil(R.drawable.galaxy_128, R.string.univ, "0000", R.color.nocturneclaro));
         perfil.add(new Perfil(R.drawable.anim_128, R.string.zoo, "0000", R.color.nocturneclaro));
         perfil.add(new Perfil(R.drawable.think_128, R.string.filo,"0000", R.color.nocturneclaro));

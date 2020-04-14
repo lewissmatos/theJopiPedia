@@ -22,7 +22,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.thejopipedia.RecylclerViewAdapter.RecyclerViewAdapterNota;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -53,7 +52,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
 
         dialog = new ProgressDialog(this);
 
-        String colorbarra = "#383E40";
+        String colorbarra = "#2B2B33";
 
         user = Preferences.getUserData(this);
 
@@ -143,7 +142,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
     }
 
     private void getApunte(){
-        dialog.setMessage("cargando apuntes...");
+        dialog.setMessage("Cargando apuntes…");
         dialog.setCanceledOnTouchOutside(false);
         dialog.show();
 
@@ -219,7 +218,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
     }
 
     private void editApunte(final String encabezado, final String contenido){
-        dialog.setMessage("editando apunte");
+        dialog.setMessage("Editando apunte");
         dialog.setCanceledOnTouchOutside(false);
         dialog.show();
 
