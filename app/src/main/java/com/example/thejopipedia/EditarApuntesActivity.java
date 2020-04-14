@@ -139,6 +139,24 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
                 }
                 break;
             case R.id.btnEliminar:
+                opdialog = new AlertDialog.Builder(this);
+                opdialog.setMessage("Seguro que desea eliminar")
+                        .setTitle(R.string.advertencia)
+                        .setIcon(R.drawable.eliminar_rojo)
+                        .setPositiveButton(R.string.aceptar_sesion, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                startActivity(new Intent(EditarApuntesActivity.this, CuentaActivity.class));
+                                finish();
+                            }
+                        }).setNegativeButton(R.string.cancelar_sesion, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+                opdialog.create();
+                opdialog.show();
+
                 //EIRON HAZ TU MAGIA
         }
     }
