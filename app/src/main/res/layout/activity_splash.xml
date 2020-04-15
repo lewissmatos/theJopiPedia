@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="JopiPedia"
+            android:text="JopiTopics"
             android:layout_marginTop="-20dp"
             android:fontFamily="sans-serif-smallcaps"
             android:textSize="40sp"
@@ -40,7 +40,7 @@
             android:layout_width="180dp"
             android:layout_marginTop="-20dp"
             android:layout_height="180dp"
-            app:srcCompat="@drawable/logotipo1">
+            app:srcCompat="@drawable/logo_dark">
         </ImageView>
 
         <TextView

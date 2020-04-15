@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="JopiPedia"
+            android:text="JopiTopics"
             android:textColor="@color/nocturne"
             android:textSize="22sp" />
 
@@ -32,7 +32,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginTop="-4dp"
-            app:srcCompat="@drawable/logotipo1" />
+            app:srcCompat="@drawable/logo_dark" />
 
 
     </LinearLayout>
