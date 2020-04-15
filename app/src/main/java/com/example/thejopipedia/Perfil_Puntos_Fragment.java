@@ -35,18 +35,18 @@ public class Perfil_Puntos_Fragment extends Fragment {
     private ArrayList<Perfil> getPerfilList(){
         ArrayList<Perfil> perfil = new ArrayList<>();
 
-        perfil.add(new Perfil(R.drawable.bio_dna_128, R.string.bio, "0000", R.color.gray_texts_color));
-        perfil.add(new Perfil(R.drawable.galaxy_128, R.string.univ, "0000", R.color.nocturneclaro));
-        perfil.add(new Perfil(R.drawable.anim_128, R.string.zoo, "0000", R.color.nocturneclaro));
-        perfil.add(new Perfil(R.drawable.think_128, R.string.filo,"0000", R.color.nocturneclaro));
-        perfil.add(new Perfil(R.drawable.atom_128, R.string.fis, "0000", R.color.nocturneclaro));
-        perfil.add(new Perfil(R.drawable.globe_128, R.string.geo, "0000", R.color.nocturneclaro));
-        perfil.add(new Perfil(R.drawable.computer_128, R.string.comp, "0000", R.color.nocturneclaro));
-        perfil.add(new Perfil(R.drawable.test_128, R.string.quim, "0000", R.color.nocturneclaro));
-        perfil.add(new Perfil(R.drawable.num_128, R.string.mat, "0000", R.color.nocturneclaro));
-        perfil.add(new Perfil(R.drawable.sword_128, R.string.his, "0000", R.color.nocturneclaro));
-        perfil.add(new Perfil(R.drawable.purple_book, R.string.lit,"0000", R.color.nocturneclaro));
-        perfil.add(new Perfil(R.drawable.temple_128, R.string.mit, "0000", R.color.nocturneclaro));
+        perfil.add(new Perfil(R.drawable.bio_dna_128, R.string.bio, "0000", R.color.bio99));
+        perfil.add(new Perfil(R.drawable.galaxy_128, R.string.univ, "0000", R.color.univ99));
+        perfil.add(new Perfil(R.drawable.anim_128, R.string.zoo, "0000", R.color.zoo99));
+        perfil.add(new Perfil(R.drawable.think_128, R.string.filo,"0000", R.color.filo99));
+        perfil.add(new Perfil(R.drawable.atom_128, R.string.fis, "0000", R.color.fis99));
+        perfil.add(new Perfil(R.drawable.globe_128, R.string.geo, "0000", R.color.geo99));
+        perfil.add(new Perfil(R.drawable.computer_128, R.string.comp, "0000", R.color.comp99));
+        perfil.add(new Perfil(R.drawable.test_128, R.string.quim, "0000", R.color.quim99));
+        perfil.add(new Perfil(R.drawable.num_128, R.string.mat, "0000", R.color.mat99));
+        perfil.add(new Perfil(R.drawable.sword_128, R.string.his, "0000", R.color.his99));
+        perfil.add(new Perfil(R.drawable.purple_book, R.string.lit,"0000", R.color.lit99));
+        perfil.add(new Perfil(R.drawable.temple_128, R.string.mit, "0000", R.color.mit99));
 
         return perfil;
 

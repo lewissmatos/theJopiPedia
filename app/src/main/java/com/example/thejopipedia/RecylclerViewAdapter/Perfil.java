@@ -5,13 +5,13 @@ public class Perfil {
     private int image;
     private int tittle;
     private String puntuacion;
-    private int color;
+    private int textColor;
 
-    public Perfil(int image, int tittle, String puntuacion, int color) {
+    public Perfil(int image, int tittle, String puntuacion, int textColor) {
         this.image = image;
         this.tittle = tittle;
         this.puntuacion = puntuacion;
-        this.color = color;
+        this.textColor = textColor;
     }
 
     public int getImage() {
@@ -30,12 +30,12 @@ public class Perfil {
         this.tittle = tittle;
     }
 
-    public int getColor() {
-        return color;
+    public int getTextColor() {
+        return textColor;
     }
 
-    public void setColor(int color) {
-        this.color = color;
+    public void setTextColor(int textColor) {
+        this.textColor = textColor;
     }
 
     public String getPuntuacion() {

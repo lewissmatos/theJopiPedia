@@ -99,7 +99,7 @@
                 android:padding="8dp"
                 android:textStyle="bold"
                 android:textColor="@color/nocturne"
-                android:maxLength="22"
+                android:maxLength="30"
                 android:textSize="30sp" />
             <EditText
                 android:id="@+id/contenido"
@@ -110,7 +110,7 @@
                 android:layout_marginTop="2dp"
                 android:hint="Contenido"
                 android:background="@drawable/xml_vacio"
-                android:maxLength="500"
+                android:maxLength="400"
                 android:inputType="textMultiLine"
                 android:padding="8dp"
                 android:textSize="16sp"

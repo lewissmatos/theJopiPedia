@@ -19,7 +19,7 @@
             android:id="@+id/rltLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#c2c2c2">
+            android:background="@color/light_texts_color">
 
             <ImageView
                 android:id="@+id/imgmg"
@@ -50,7 +50,7 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:text="Titulo"
                     android:textStyle="bold"
-                    android:textColor="@color/light_texts_color"
+                    android:textColor="@color/nocturne"
                     android:textSize="24sp" />
 
                 <TextView
@@ -62,23 +62,14 @@
                     android:layout_toRightOf="@id/imgmg"
                     android:fontFamily="sans-serif-smallcaps"
                     android:text="0000"
-                    android:layout_marginTop="2dp"
-                    android:textColor="@color/light_texts_color"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/nocturne"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:layout_alignParentBottom="true"
-                android:background="@color/light_texts_color"
-                android:orientation="horizontal">
-
-            </LinearLayout>
 
         </RelativeLayout>
 

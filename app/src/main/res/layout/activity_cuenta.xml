@@ -83,17 +83,19 @@
                 <LinearLayout
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
+                    android:gravity="right"
+                    android:orientation="vertical">
 
                     <Button
                         android:id="@+id/btnLogOut"
-                        android:layout_width="74dp"
+                        android:layout_width="70dp"
                         android:layout_height="37dp"
                         android:layout_marginTop="12dp"
+                        android:layout_marginEnd="6dp"
                         android:background="@drawable/degradereglayoutprin"
                         android:drawableLeft="@drawable/logoutblack"
                         android:drawablePadding="-12dp"
+                        android:paddingEnd="-6dp"
                         android:paddingStart="4dp"
                         android:text="@string/cerrar_sesion"
                         android:textColor="@color/light_texts_color"
