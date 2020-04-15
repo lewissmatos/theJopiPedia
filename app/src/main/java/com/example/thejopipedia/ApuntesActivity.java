@@ -6,10 +6,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +34,7 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
     ImageView btnVolver, btnListo;
     EditText encabezado, contenido;
     private Usuario user;
+    TextView contador;
     private ProgressDialog dialog;
 
     @Override
@@ -52,6 +55,19 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
         contenido= findViewById(R.id.contenido);
         btnVolver= findViewById(R.id.btnVolver);
         btnListo= findViewById(R.id.btnListo);
+
+        contador= findViewById(R.id.contador);
+
+        contenido.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+                if (event.getAction() == KeyEvent.ACTION_UP){
+                    contador.setText(String.valueOf(contenido.length()) + "/400");
+                }
+                return false;
+            }
+        });
 
         btnVolver.setOnClickListener(this);
         btnListo.setOnClickListener(this);

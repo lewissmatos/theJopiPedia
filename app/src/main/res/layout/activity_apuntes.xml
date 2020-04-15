@@ -77,6 +77,24 @@
             android:padding="20dp"
             android:orientation="vertical">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/contador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="00/400"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/nocturne"
+                    >
+
+                </TextView>
+            </RelativeLayout>
+
             <EditText
                 android:id="@+id/encabezado"
                 android:layout_width="match_parent"
@@ -87,6 +105,7 @@
                 android:background="@drawable/xml_vacio"
                 android:gravity="center"
                 android:padding="8dp"
+                android:inputType="text"
                 android:textStyle="bold"
                 android:textColor="@color/nocturne"
                 android:maxLength="30"
