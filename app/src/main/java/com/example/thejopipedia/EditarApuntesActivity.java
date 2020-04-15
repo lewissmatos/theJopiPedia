@@ -70,7 +70,6 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
         btnVolver.setOnClickListener(this);
         btnListo.setOnClickListener(this);
 
-        getApunte();
     }
 
     @Override

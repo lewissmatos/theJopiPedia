@@ -58,7 +58,7 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="30dp"
                     android:text="contenido"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="14dp"
                     android:inputType="textShortMessage"
                     android:textColor="@color/dark_texts_color"
                     android:textSize="14sp"
