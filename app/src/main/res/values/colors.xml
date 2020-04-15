@@ -29,7 +29,7 @@
     <color name="comp">#6B837E</color>
     <color name="quim">#0490D1</color>
     <color name="mat">#EF1515</color>
-    <color name="his">#DFE651</color>
+    <color name="his">#FFEA00</color>
     <color name="lit">#5734A5</color>
     <color name="mit">#454545</color>
     //99COLORS (TRANS)
@@ -42,7 +42,7 @@
     <color name="comp99">#99729C98</color>
     <color name="quim99">#990490D1</color>
     <color name="mat99">#99EF1515</color>
-    <color name="his99">#CCCCD51A</color>
+    <color name="his99">#CCFFEA00</color>
     <color name="lit99">#995734A5</color>
     <color name="mit99">#99454545</color>
     <color name="anime">#9921597C</color>
@@ -56,7 +56,7 @@
     <color name="compclaro">#4D6B837E</color>
     <color name="quimclaro">#4D0490D1</color>
     <color name="matclaro">#4DEF1515</color>
-    <color name="hisclaro">#4DCCD51A</color>
+    <color name="hisclaro">#4DFFEA00</color>
     <color name="litclaro">#4D5734A5</color>
     <color name="mitclaro">#4D454545</color>
     <color name="transparente_puro">#00FFFFFF</color>
