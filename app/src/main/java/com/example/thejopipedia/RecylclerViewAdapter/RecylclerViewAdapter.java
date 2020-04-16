@@ -15,8 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.thejopipedia.BiologiaActivity;
 import com.example.thejopipedia.R;
+import com.example.thejopipedia.TopicsActivity;
 
 import java.util.ArrayList;
 
@@ -63,7 +63,7 @@ public class RecylclerViewAdapter extends RecyclerView.Adapter<RecylclerViewAdap
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(context, BiologiaActivity.class);
+                    Intent i = new Intent(context, TopicsActivity.class);
                     Bundle b = new Bundle();
                     b.putInt("id", getAdapterPosition());
                     i.putExtras(b);

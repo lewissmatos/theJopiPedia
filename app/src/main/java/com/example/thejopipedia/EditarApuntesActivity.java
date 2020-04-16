@@ -86,6 +86,8 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
         btnVolver.setOnClickListener(this);
         btnListo.setOnClickListener(this);
 
+        getApunte();
+
     }
 
     @Override
@@ -198,7 +200,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
     }
 
     private void deleteApunte(){
-        dialog.setMessage("eliminado apunte");
+        dialog.setMessage("Eliminado apunte");
         dialog.setCanceledOnTouchOutside(false);
         dialog.show();
 

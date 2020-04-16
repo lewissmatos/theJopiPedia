@@ -37,8 +37,9 @@ public class RecyclerViewAdapterNota  extends RecyclerView.Adapter<RecyclerViewA
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapterNota.ViewHolder holder, int position) {
         holder.encabezado.setText(notas.get(position).getEncabezado());
-        if (notas.get(position).getContenido().length() > 30){
-            String texto = notas.get(position).getContenido().substring(0, 30);
+
+        if (notas.get(position).getContenido().length() > 38){
+            String texto = notas.get(position).getContenido().substring(0, 38);
             holder.contenido.setText(texto + "…");
         }
         else {
