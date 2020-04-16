@@ -34,8 +34,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#69BD76"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/verde"
             android:background="@drawable/layout_principal_curvasabajo"
             android:orientation="horizontal">
 
@@ -58,18 +58,24 @@
 
             <LinearLayout
                 android:id="@+id/lyPrin"
-                android:layout_width="200dp"
-                android:layout_height="130dp"
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="-6dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center_horizontal"
-                    app:srcCompat="@drawable/reg" />
-
+                    android:layout_marginTop="8dp"
+                    app:srcCompat="@drawable/logo_dark" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Registrarse"
+                    android:textColor="@color/light_texts_color"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -169,7 +175,8 @@
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/curvas_rojas"
+            android:background="@drawable/button_rouned"
+            android:backgroundTint="@color/verde"
             android:drawableLeft="@drawable/ic_person_add_black_24dp"
             android:drawablePadding="-46dp"
             android:paddingLeft="25dp"
