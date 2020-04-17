@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="#FAFAFA"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -41,96 +41,117 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/serv_en_des"
-        android:textColor="@color/gray_texts_color"
+        android:textColor="#D3D3D3"
         android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/txtUser"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:text="@string/email"
-        android:textColor="#535353"
-        android:textSize="20sp" />
-
-    <EditText
-        android:id="@+id/edUser"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:background="@drawable/curves"
-        android:hint="@string/email_hint"
-        android:padding="8dp"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/txtPass"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="@string/contraseña"
-        android:textColor="#535353"
-        android:textSize="20sp" />
-
-    <EditText
-        android:id="@+id/edPass"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:background="@drawable/curves"
-        android:ems="10"
-        android:hint="@string/contraseña_hint"
-        android:inputType="textPassword"
-        android:padding="8dp"
-        android:textSize="15sp" />
+        app:cardElevation="2dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="20dp"
+        >
 
         <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="127dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Iniciar sesión"
+                android:textStyle="bold"
+                android:textColor="@color/gris_tabla"
+                android:layout_marginTop="10dp"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txtUser"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/email"
+                android:textColor="#535353"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edUser"
+                android:layout_width="230dp"
+                android:layout_height="44dp"
+                android:background="@drawable/curves"
+                android:hint="@string/email_hint"
+                android:padding="8dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtPass"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/contraseña"
+                android:textColor="#535353"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edPass"
+                android:layout_width="230dp"
+                android:layout_height="44dp"
+                android:background="@drawable/curves"
+                android:ems="10"
+                android:hint="@string/contraseña_hint"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/btnInic"
-                android:layout_width="200dp"
+                android:layout_width="230dp"
                 android:textSize="14sp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
                 android:backgroundTint="@color/nocturne"
                 android:background="@drawable/button_rouned"
-                android:drawableLeft="@drawable/iniciaricon"
-                android:drawablePadding="-40dp"
-                android:paddingLeft="20dp"
                 android:text="@string/iniciar_sesion"
                 android:textColor="#fff" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="#4A4A4A"
-            android:textSize="13sp"
-            android:text="@string/no_cuenta">
-
-        </TextView>
-
-
-            <Button
-                android:id="@+id/btnReg"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_rouned"
-                android:drawableLeft="@drawable/ic_person_add_black_24dp"
-                android:drawablePadding="-40dp"
-                android:backgroundTint="@color/verde"
-                android:paddingLeft="20dp"
-                android:text="@string/registrarse"
-                android:layout_marginTop="8dp"
-                android:textColor="#fff"
-                android:textSize="14sp"
-            />
-
 
         </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#4A4A4A"
+                    android:paddingStart="6dp"
+                    android:textSize="16sp"
+                    android:text="@string/no_cuenta">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/btnReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/nocturne"
+                    android:paddingStart="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="@string/registrarse">
+                </TextView>
+            </LinearLayout>
+
 
     <ImageView
         android:id="@+id/imgInfo"
