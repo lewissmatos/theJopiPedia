@@ -84,6 +84,7 @@
                 android:id="@+id/edUser"
                 android:layout_width="230dp"
                 android:layout_height="44dp"
+                android:gravity="center"
                 android:background="@drawable/curves"
                 android:hint="@string/email_hint"
                 android:inputType="text"
@@ -105,6 +106,7 @@
                 android:id="@+id/edPass"
                 android:layout_width="230dp"
                 android:layout_height="44dp"
+                android:gravity="center"
                 android:background="@drawable/curves"
                 android:ems="10"
                 android:hint="@string/contraseña_hint"
@@ -159,8 +161,8 @@
 
     <ImageView
         android:id="@+id/imgInfo"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         app:srcCompat="@drawable/ic_info"
         android:layout_marginTop="50dp"/>
 

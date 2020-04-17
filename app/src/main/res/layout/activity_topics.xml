@@ -12,67 +12,50 @@
         android:background="#fff"
         android:gravity="center_horizontal"
         android:orientation="vertical">
-        <LinearLayout
+
+        <RelativeLayout
             android:id="@+id/lyPrin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="120dp"
             android:backgroundTint="@color/principal_color"
             android:background="@drawable/layout_principal_curvasabajo"
-            android:gravity="center"
+            android:gravity="left"
             android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent"
-            tools:context=".MainActivity">
-
-            <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="left"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/btnVolver"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/arrow_back" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="200dp"
-                android:layout_height="120dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/txtTitulo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-2dp"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:text="@string/bio"
-                    style="bold"
-                    android:textColor="@color/light_texts_color"
-                    android:textSize="30sp" />
+            >
+            <ImageView
+                android:id="@+id/btnVolver"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
+                app:srcCompat="@drawable/arrow_back"
+                />
 
 
-                <ImageView
-                    android:id="@+id/img"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="-2dp"
-                    app:srcCompat="@drawable/bio_dna_128" />
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/physics_126px" />
 
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img"
+                android:layout_marginTop="6dp"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Topic"
+                android:textColor="@color/light_texts_color"
+                android:textSize="24sp" />
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-            </LinearLayout>
-        </LinearLayout>
+        </RelativeLayout>
+
 
         <TextView
             android:id="@+id/txtEnc"
@@ -87,13 +70,18 @@
             app:layout_constraintTop_toTopOf="parent">
 
         </TextView>
-
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            app:cardElevation="3dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="50dp">
         <LinearLayout
 
             android:id="@+id/lybuttons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -101,7 +89,6 @@
                 android:id="@+id/btnPlay"
                 android:layout_width="280dp"
                 android:layout_height="280dp"
-                android:layout_marginTop="20dp"
                 android:background="@drawable/btnplay"
                 android:drawableTop="@drawable/play_circle"
                 android:drawablePadding="-20dp"
@@ -113,6 +100,7 @@
             </Button>
         </LinearLayout>
 
+    </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
