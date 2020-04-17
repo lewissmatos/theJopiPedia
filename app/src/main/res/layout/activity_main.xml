@@ -47,7 +47,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_height="310dp"
         android:layout_marginTop="30dp"
         app:cardElevation="2dp"
         android:layout_gravity="center"
@@ -86,7 +86,9 @@
                 android:layout_height="44dp"
                 android:background="@drawable/curves"
                 android:hint="@string/email_hint"
+                android:inputType="text"
                 android:padding="8dp"
+                android:layout_marginTop="6dp"
                 android:textSize="15sp" />
 
             <TextView
@@ -107,6 +109,7 @@
                 android:ems="10"
                 android:hint="@string/contraseña_hint"
                 android:inputType="textPassword"
+                android:layout_marginTop="6dp"
                 android:padding="8dp"
                 android:textSize="15sp" />
 
