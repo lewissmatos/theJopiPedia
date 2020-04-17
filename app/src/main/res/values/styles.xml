@@ -9,5 +9,14 @@
         <item name="android:textColorPrimary">#000</item>
     </style>
 
+ <style name="DialogBasicCustomDelete" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="colorAccent">#FF4250</item>
+ </style>
+
+ <style name="DialogBasicCustomNormal" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+     <item name="colorAccent">@color/nocturne</item>
+ </style>
 
 </resources>

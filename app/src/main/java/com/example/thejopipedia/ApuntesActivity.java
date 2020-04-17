@@ -82,7 +82,7 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
                 String cont = contenido.getText().toString();
 
                 if (!enc.isEmpty() || !cont.isEmpty()){
-                    opdialog = new AlertDialog.Builder(this);
+                    opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomNormal);
                     opdialog.setMessage("Desea salir sin guardar")
                             .setTitle(R.string.advertencia)
                             .setIcon(R.drawable.advertencia)

@@ -98,7 +98,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
                 String cont = contenido.getText().toString();
 
                 if (!enc.isEmpty() || !cont.isEmpty()){
-                    opdialog = new AlertDialog.Builder(this);
+                    opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomNormal);
                     opdialog.setMessage("Desea salir sin guardar")
                             .setTitle(R.string.advertencia)
                             .setIcon(R.drawable.advertencia)
@@ -138,7 +138,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
                 }
                 break;
             case R.id.btnEliminar:
-                opdialog = new AlertDialog.Builder(this);
+                opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomDelete);
                 opdialog.setMessage("Seguro que desea eliminar")
                         .setTitle(R.string.advertencia)
                         .setIcon(R.drawable.eliminar_rojo)

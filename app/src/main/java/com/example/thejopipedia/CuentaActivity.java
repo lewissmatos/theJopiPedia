@@ -86,7 +86,7 @@ public class CuentaActivity extends AppCompatActivity implements OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnLogOut:
-                opdialog = new AlertDialog.Builder(this);
+                opdialog = new AlertDialog.Builder(this, R.style.DialogBasicCustomNormal);
                 opdialog.setMessage(R.string.desea_cerrar)
                         .setIcon(R.drawable.advertencia)
                         .setTitle(R.string.advertencia)
