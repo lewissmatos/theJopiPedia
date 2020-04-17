@@ -19,33 +19,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <LinearLayout
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/principal_color"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/nocturne"
             android:background="@drawable/layout_principal_curvasabajo"
             android:gravity="left"
             android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent"
-            tools:context=".MainActivity">
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_gravity="center_horizontal"
-            android:backgroundTint="@color/nocturne"
-            android:background="@drawable/layout_principal_curvasabajo"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="left"
-                android:paddingStart="6dp"
-                android:orientation="vertical">
-
+            >
                 <ImageView
                     android:id="@+id/btnVolver"
                     android:layout_width="30dp"
@@ -54,40 +37,28 @@
                     app:srcCompat="@drawable/arrow_back"
                     />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lyPrin"
-                android:layout_width="190dp"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/logo"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
+                    android:layout_centerHorizontal="true"
                     app:srcCompat="@drawable/logo_dark" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:text="Registrarse"
-                    android:textColor="@color/light_texts_color"
-                    android:textSize="20sp" />
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txtReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/registrarse"
+                android:textColor="@color/light_texts_color"
+                android:textSize="20sp" />
 
-
-
-            </LinearLayout>
-        </LinearLayout>
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/txtNom"
@@ -180,7 +151,7 @@
             android:drawableLeft="@drawable/ic_person_add_black_24dp"
             android:drawablePadding="-46dp"
             android:paddingLeft="25dp"
-            android:text="@string/registrarse"
+            android:text="@string/aceptar_sesion"
             android:textColor="#fff"
             android:textSize="14sp" />
 

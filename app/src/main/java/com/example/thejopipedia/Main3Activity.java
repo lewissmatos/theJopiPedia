@@ -12,20 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class Main3Activity extends AppCompatActivity implements View.OnClickListener {
     private ProgressDialog dialog;
@@ -40,7 +27,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        String colorbarra = "#69BD76";
+        String colorbarra = "#2B2B33";
 
         this.window = getWindow();
         //barcolor
