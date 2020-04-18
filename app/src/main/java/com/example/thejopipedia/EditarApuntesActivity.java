@@ -55,7 +55,7 @@ public class EditarApuntesActivity extends AppCompatActivity implements View.OnC
 
         dialog = new ProgressDialog(this);
 
-        String colorbarra = "#2B2B33";
+        String colorbarra = "#454550";
 
         user = Preferences.getUserData(this);
 

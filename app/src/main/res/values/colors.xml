@@ -12,7 +12,7 @@
     <color name="trans">#1AFFFFFF</color>
     <color name="trns">#00FFFFFF</color>
     //--------------------------------------------
-    <color name="principal_color">#EDEDED</color>
+    <color name="principal_color">#F4F4F4</color>
     <color name="dark_texts_color">#515151</color>
     <color name="nocturne">#454550</color>
     <color name="nocturneclaro">#797987</color>

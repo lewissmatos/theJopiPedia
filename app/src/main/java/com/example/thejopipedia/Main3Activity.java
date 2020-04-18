@@ -18,7 +18,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
     private ProgressDialog dialog;
     private Button btnReg;
     private EditText edUser, edPass, edRPass, edNom;
-    private String us, pass, mat, nom, rpass;
+    private String us, pass, nom, rpass;
     TextView btnVolver;
     private Window window;
     @Override

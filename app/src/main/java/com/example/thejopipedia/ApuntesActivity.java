@@ -43,7 +43,7 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_apuntes);
         dialog = new ProgressDialog(this);
 
-        String colorbarra = "#2B2B33";
+        String colorbarra = "#454550";
 
         user = Preferences.getUserData(this);
 
@@ -57,7 +57,6 @@ public class ApuntesActivity extends AppCompatActivity implements View.OnClickLi
         btnListo= findViewById(R.id.btnListo);
 
         contador= findViewById(R.id.contador);
-
         contenido.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
