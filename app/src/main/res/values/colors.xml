@@ -22,7 +22,7 @@
 
     //COLORES DE TEMAS
     <color name="bio">#FBA53A</color>
-    <color name="univ">#5F9E98</color>
+    <color name="univ">#48817C</color>
     <color name="zoo">#AF7C2F</color>
     <color name="filo">#637785</color>
     <color name="fis">#000</color>
@@ -35,8 +35,8 @@
     <color name="mit">#454545</color>
     //99COLORS (TRANS)
     <color name="bio99">#99FBA53A</color>
-    <color name="univ99">#995F9E98</color>
-    <color name="zoo99">#99D8AA65</color>
+    <color name="univ99">#B348817C</color>
+    <color name="zoo99">#B3AF7C2F</color>
     <color name="filo99">#99637785</color>
     <color name="fis99">#CC000000</color>
     <color name="geo99">#CC27C56A</color>
