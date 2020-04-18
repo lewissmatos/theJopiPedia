@@ -13,7 +13,7 @@
     <LinearLayout
         android:id="@+id/lyPrin"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="110dp"
         android:backgroundTint="@color/principal_color"
         android:background="@drawable/layout_principal_curvasabajo"
         android:gravity="center_horizontal"
@@ -24,7 +24,7 @@
             android:id="@+id/imgClass"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="4dp"
             app:srcCompat="@drawable/logo_dark" />
 
         <TextView
@@ -70,14 +70,14 @@
                 android:text="Iniciar sesión"
                 android:textStyle="bold"
                 android:textColor="@color/gris_tabla"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="-2dp"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/txtUser"
                 android:layout_width="230dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="14dp"
                 android:gravity="left"
                 android:text="@string/email"
                 android:textColor="#535353"

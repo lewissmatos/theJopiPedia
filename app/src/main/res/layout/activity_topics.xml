@@ -16,7 +16,7 @@
         <RelativeLayout
             android:id="@+id/lyPrin"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="110dp"
             android:backgroundTint="@color/principal_color"
             android:background="@drawable/layout_principal_curvasabajo"
             android:gravity="left"
@@ -27,8 +27,8 @@
                 android:id="@+id/btnVolver"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/back_new"
                 />
 
@@ -39,7 +39,7 @@
                 android:layout_height="70dp"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="6dp"
                 app:srcCompat="@drawable/physics_126px" />
 
             <TextView
@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/img"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="2dp"
                 android:layout_centerInParent="true"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="Topic"
@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/toque_boton_iniciar"
-            android:textColor="#996A6A6A"
+            android:textColor="#DCDCDC"
             android:layout_marginTop="6dp"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"

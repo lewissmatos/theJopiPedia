@@ -22,7 +22,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="110dp"
             android:backgroundTint="@color/nocturne"
             android:background="@drawable/layout_principal_curvasabajo"
             android:gravity="center"
@@ -47,8 +47,9 @@
                 android:layout_centerInParent="true"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="@string/registrarse"
+                android:layout_marginTop="2dp"
                 android:textColor="@color/light_texts_color"
-                android:textSize="20sp" />
+                android:textSize="22sp" />
 
         </RelativeLayout>
 
