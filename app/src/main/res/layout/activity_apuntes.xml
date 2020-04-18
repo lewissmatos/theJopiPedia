@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="110dp"
             android:gravity="center_horizontal"
             android:backgroundTint="@color/nocturne"
             android:background="@drawable/layout_principal_curvasabajo"
@@ -40,7 +40,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="20dp"
                     android:text="@string/apuntes"
                     android:textStyle="bold"
                     android:textColor="@color/light_texts_color"
@@ -54,7 +54,7 @@
                     android:fontFamily="sans-serif-smallcaps"
                     android:text="Crear"
                     android:textColor="@color/gray_texts_color"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <ImageView
