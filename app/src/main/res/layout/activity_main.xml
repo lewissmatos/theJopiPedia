@@ -59,9 +59,11 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
             >
 
             <TextView
+                android:id="@+id/encabezado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Iniciar sesión"
@@ -82,10 +84,13 @@
 
             <EditText
                 android:id="@+id/edUser"
-                android:layout_width="230dp"
+                android:layout_width="240dp"
                 android:layout_height="44dp"
                 android:gravity="center"
                 android:background="@drawable/curves"
+                android:drawablePadding="4dp"
+                android:paddingEnd="28dp"
+                android:drawableLeft="@drawable/usuarioicon"
                 android:hint="@string/email_hint"
                 android:inputType="text"
                 android:padding="8dp"
@@ -104,20 +109,23 @@
 
             <EditText
                 android:id="@+id/edPass"
-                android:layout_width="230dp"
+                android:layout_width="240dp"
                 android:layout_height="44dp"
                 android:gravity="center"
                 android:background="@drawable/curves"
                 android:ems="10"
+                android:drawablePadding="4dp"
+                android:paddingEnd="28dp"
                 android:hint="@string/contraseña_hint"
                 android:inputType="textPassword"
+                android:drawableLeft="@drawable/passicon"
                 android:layout_marginTop="6dp"
                 android:padding="8dp"
                 android:textSize="15sp" />
 
             <Button
                 android:id="@+id/btnInic"
-                android:layout_width="230dp"
+                android:layout_width="240dp"
                 android:textSize="14sp"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"

@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +19,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
     private Button btnReg;
     private EditText edUser, edPass, edRPass, edNom;
     private String us, pass, mat, nom, rpass;
-    ImageView btnVolver;
+    TextView btnVolver;
     private Window window;
     @Override
     @SuppressLint("SourceLockedOrientationActivity")

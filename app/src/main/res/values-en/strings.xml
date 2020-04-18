@@ -34,8 +34,9 @@
     <string name="contraseña_hint">Write your password…</string>
     <string name="contraseña">Password</string>
     <string name="iniciar_sesion">"Log in"</string>
-    <string name="registrarse">Register</string>
-    <string name="no_cuenta">Dont have an account yet??</string>
+    <string name="registrarse">Sing in</string>
+    <string name="no_cuenta">Dont have an account yet?</string>
+    <string name="tiene_cuenta">Already have an account?</string>
     <string name="eslogan">Expand your mind!</string>
     <string name="agregar_usuario">Add user</string>
     <string name="nom_apell">Complete names:</string>

@@ -32,8 +32,9 @@
     <string name="contraseña_hint">Escriba su Contraseña…</string>
     <string name="contraseña">Contraseña</string>
     <string name="iniciar_sesion">"Iniciar sesión"</string>
-    <string name="registrarse">Registrarse</string>
+    <string name="registrarse">Registrate</string>
     <string name="no_cuenta">¿Aún no tienes una cuenta?</string>
+    <string name="tiene_cuenta">¿Ya tienes una cuenta?</string>
     <string name="eslogan">Expande tu mente!</string>
     <string name="agregar_usuario">Agregar usuario</string>
     <string name="nom_apell">Nombre completo:</string>
