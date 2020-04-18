@@ -88,7 +88,7 @@ public class TopicsActivity extends AppCompatActivity implements View.OnClickLis
                 img.setImageResource(R.drawable.anim_128);
                 btnPlay.setBackgroundTintList(getResources().getColorStateList(R.color.zoo99));
                 //---------------------------------------------------------
-                String barraZoo = "#B3AF7C2F";
+                String barraZoo = "#CCCD9A4F";
                 this.window = getWindow();
                 //barcolor
                 window.setStatusBarColor(Color.parseColor(barraZoo));

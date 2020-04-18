@@ -27,7 +27,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        String colorbarra = "#2B2B33";
+        String colorbarra = "#454550";
 
         this.window = getWindow();
         //barcolor

@@ -14,7 +14,7 @@
     //--------------------------------------------
     <color name="principal_color">#EDEDED</color>
     <color name="dark_texts_color">#515151</color>
-    <color name="nocturne">#2B2B33</color>
+    <color name="nocturne">#454550</color>
     <color name="nocturneclaro">#797987</color>
     <color name="light_texts_color">#FFFFFF</color>
     <color name="gray_texts_color">#9E9E9E</color>
@@ -36,7 +36,7 @@
     //99COLORS (TRANS)
     <color name="bio99">#99FBA53A</color>
     <color name="univ99">#B348817C</color>
-    <color name="zoo99">#B3AF7C2F</color>
+    <color name="zoo99">#CCCD9A4F</color>
     <color name="filo99">#99637785</color>
     <color name="fis99">#CC000000</color>
     <color name="geo99">#CC27C56A</color>
