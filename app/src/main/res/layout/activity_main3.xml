@@ -147,8 +147,8 @@
             android:background="@drawable/button_rouned"
             android:backgroundTint="@color/nocturne"
             android:drawableLeft="@drawable/ic_person_add_black_24dp"
-            android:drawablePadding="-46dp"
-            android:paddingLeft="25dp"
+            android:drawablePadding="-70dp"
+            android:paddingLeft="50dp"
             android:text="@string/aceptar_sesion"
             android:textColor="#fff"
             android:textSize="14sp" />
