@@ -70,14 +70,14 @@
                 android:text="Iniciar sesión"
                 android:textStyle="bold"
                 android:textColor="@color/gris_tabla"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="2dp"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/txtUser"
                 android:layout_width="230dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="10dp"
                 android:gravity="left"
                 android:text="@string/email"
                 android:textColor="#535353"
@@ -94,8 +94,8 @@
                 android:drawableLeft="@drawable/usuarioicon"
                 android:hint="@string/email_hint"
                 android:inputType="text"
-                android:padding="8dp"
-                android:layout_marginTop="8dp"
+                android:padding="6dp"
+                android:layout_marginTop="10dp"
                 android:textSize="15sp" />
 
             <TextView
@@ -120,8 +120,8 @@
                 android:hint="@string/contraseña_hint"
                 android:inputType="textPassword"
                 android:drawableLeft="@drawable/passicon"
-                android:layout_marginTop="8dp"
-                android:padding="8dp"
+                android:layout_marginTop="10dp"
+                android:padding="6dp"
                 android:textSize="15sp" />
 
             <Button
@@ -129,7 +129,7 @@
                 android:layout_width="240dp"
                 android:textSize="14sp"
                 android:layout_height="50dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="18dp"
                 android:backgroundTint="@color/nocturne"
                 android:background="@drawable/button_rouned"
                 android:text="@string/iniciar_sesion"
