@@ -27,9 +27,9 @@
                 android:id="@+id/btnVolver"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="6dp"
-                app:srcCompat="@drawable/arrow_back"
+                app:srcCompat="@drawable/back_new"
                 />
 
 
@@ -76,7 +76,7 @@
             android:layout_marginTop="70dp"
             app:cardElevation="3dp"
             android:layout_gravity="center"
-            app:cardCornerRadius="50dp">
+            app:cardCornerRadius="20dp">
         <LinearLayout
 
             android:id="@+id/lybuttons"
