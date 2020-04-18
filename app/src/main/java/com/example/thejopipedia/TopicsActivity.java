@@ -77,7 +77,7 @@ public class TopicsActivity extends AppCompatActivity implements View.OnClickLis
                 img.setImageResource(R.drawable.galaxy_128);
                 btnPlay.setBackgroundTintList(getResources().getColorStateList(R.color.univ99));
                 //---------------------------------------------------------
-                String barraUniv = "#995F9E98";
+                String barraUniv = "#B348817C";
                 this.window = getWindow();
                 //barcolor
                 window.setStatusBarColor(Color.parseColor(barraUniv));
@@ -88,7 +88,7 @@ public class TopicsActivity extends AppCompatActivity implements View.OnClickLis
                 img.setImageResource(R.drawable.anim_128);
                 btnPlay.setBackgroundTintList(getResources().getColorStateList(R.color.zoo99));
                 //---------------------------------------------------------
-                String barraZoo = "#99D8AA65";
+                String barraZoo = "#B3AF7C2F";
                 this.window = getWindow();
                 //barcolor
                 window.setStatusBarColor(Color.parseColor(barraZoo));
@@ -165,7 +165,7 @@ public class TopicsActivity extends AppCompatActivity implements View.OnClickLis
                 img.setImageResource(R.drawable.sword_128);
                 btnPlay.setBackgroundTintList(getResources().getColorStateList(R.color.his99));
                 //---------------------------------------------------------
-                String barraHis = "#CCCCD51A";
+                String barraHis = "#CCFFEA00";
                 this.window = getWindow();
                 //barcolor
                 window.setStatusBarColor(Color.parseColor(barraHis));
